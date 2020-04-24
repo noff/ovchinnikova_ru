@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title = content_for?(:title) ? yield(:title) : 'Евгения Овчинникова, писательница'
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    meta name="description" content="#{content_for?(:description) ? yield(:description) : "Бла-бла-бла, тут нужен текст, да же?"}"
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = render 'partials/google-analytics'
+    link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"
+
+  body
+    - if flash[:notice]
+      .alert.alert-success = notice
+    - if flash[:alert]
+      .alert.alert-warning = alert
+    = yield
+

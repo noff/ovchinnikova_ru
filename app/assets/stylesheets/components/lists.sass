@@ -1,0 +1,23 @@
+.mk
+  &-list
+
+    &-square
+      list-style: none
+
+      li::before
+        content: "\25AA"
+        font-size: 1.25rem
+        color: $blue
+        display: inline-block
+        //width: 1rem
+        margin-left: -1.5rem
+      span
+        margin-left: .75rem
+
+    &-check
+      list-style-image: asset-url("icons/list/list-check.svg")
+
+      li
+        margin-bottom: .5rem
+        margin-top: .5rem
+        padding-left: .25rem

@@ -1,0 +1,95 @@
+.container-fluid.m-0.p-0.mk-hero-bg
+  .container
+    .align-items-center.d-none.d-md-flex.flex-nowrap
+      .col-lg-6
+        h1.display-3 Евгения
+        h1.display-3.font-weight-bold.mb-4 Овчинникова
+        h3.font-weight-light.mb-5 Писательница
+        .d-flex.mb-5
+          .mr-3 = link_to image_tag('icons/social/fb.svg'), 'https://www.facebook.com/writer.ovchinnikova', target: '_blank'
+          .mr-3 = link_to image_tag('icons/social/vk.svg'), 'https://vk.com/eugenia_ovchinnikova', target: '_blank'
+          .mr-3 = link_to image_tag('icons/social/instagram.svg'), 'https://www.instagram.com/evgenia_ovchinnikova_writer/', target: '_blank'
+      .col-lg-6
+        = image_tag 'me.png', class: 'mk-hero-img__right'
+
+      //Hidden on LG
+    .d-flex.d-md-none.pt-5
+      .col
+        h1.display-4 Евгения
+        h1.display-4.font-weight-bold.mb-4 Овчинникова
+        h5.font-weight-light.mb-5 Писательница
+        .d-flex.flex-column
+          .mr-3 = link_to image_tag('icons/social/fb.svg'), 'https://www.facebook.com/writer.ovchinnikova', target: '_blank'
+          .mr-3 = link_to image_tag('icons/social/vk.svg'), 'https://vk.com/eugenia_ovchinnikova', target: '_blank'
+          .mr-3 = link_to image_tag('icons/social/instagram.svg'), 'https://www.instagram.com/evgenia_ovchinnikova_writer/', target: '_blank'
+        = image_tag 'me.png', class: 'mk-hero-img__center'
+
+
+
+
+.container-fluid.m-0.p-0
+  .container.py-5
+    .row.mb-4
+      / .col-md-12.col-lg-8.offset-lg-2
+      .col
+        h1.text-uppercase Обо мне
+    .row.justify-content-center
+      .col-md-4
+        = image_tag 'about.png', class: 'img-fluid'
+      .col-md-8
+        p Я работаю в жанре детективного триллера, реализма и мистики, но в каком бы жанре ни был роман, повесть или рассказ, мои истории прежде всего о людях. О хороших и не очень, странных и обычных, как вы и я, которые влюбляются, делают трудный выбор, попадают в неприятности, смотрят на мир, дышат и чувствуют. Какими бы ни были мои герои, я люблю их и сочувствую, и вообще люблю все, о чем пишу, потому что любовь – точка, в которой все начинается и к чему все приходит.
+        p Я родилась в Уссурийске, выросла в Кокшетау. Когда была подростком, моя семья снова переехала на Дальний Восток, в город Арсеньев. Там я окончила университет и сразу после переехала в Петербург. Частые переезды разбудили любовь к путешествиям, и теперь они – мое хобби. Я не коллекционирую поездки, а храню каждую из них в сердце – улицы, дома, дороги, людей, обычную жизнь, которой живут в другой культуре, на другой стороне земного шара.
+        p Читать я обожала с детства, но никогда не думала, что стану писателем. Я окончила ДВГТУ по специальности «Экономика машиностроения», почти сразу основала собственную ИТ-компанию. В 2012-м году из любопытства пошла учиться в Литературную мастерскую Андрея Аствацатурова и Дмитрия Орехова, а в 2016-м, после особенно эмоциональной лекции по подтексту, села и написала рассказ «Эммануэль», который позже вошел в дебютный сборник «Мортал комбат и другие 90-е».
+        p Мои книги трижды становились финалистами Всероссийского конкурса на лучшее литературное произведение для детей и юношества «Книгуру», а один рассказ стал финалистом премии имени Дмитрия Горчева.
+        p Я живу в Петербурге с мужем, двумя детьми и тремя ахатинами.
+
+.container-fluid.m-0.p-0.bg-light
+  .container.py-5
+    .row.mb-4
+      .col
+        h1.text-uppercase Книги
+    .row.justify-content-center.mb-4
+      .col-md-4
+        .mb-3 = image_tag 'books/mortal-kombat.jpg', class: 'img-fluid'
+        h3 Мортал комбат и другие 90-е
+        div Сборник рассказов
+      .col-md-4
+        .mb-3 = image_tag 'books/return.jpg', class: 'img-fluid'
+        h3 Иди и возвращайся
+        div Роман
+      .col-md-4
+        .mb-3 = image_tag 'books/zero.jpg', class: 'img-fluid'
+        h3 Магия Зеро
+        div Роман
+    .row.justify-content-center
+      .col-md-4
+        .mb-3 = image_tag 'books/stories.jpg', class: 'img-fluid'
+        h3 Удивительные истории о любви
+        div Сборник рассказов
+      .col-md-4
+        .mb-3 = image_tag 'books/twist.jpg', class: 'img-fluid'
+        h3 Твист на банке из под шпрот
+        div Сборник рассказов
+      .col-md-4
+        .mb-3 = image_tag 'books/brick.jpg', class: 'img-fluid'
+        h3 Рукопожатие кирпича
+        div Сборник рассказов
+
+
+
+
+.container-fluid.m-0.p-0.bg-light
+  .container.py-5
+    .row
+      .col
+        h1.text-uppercase Contact me
+    .row.justify-content-center.py-5
+      .col-md-12.col-lg-10.text-center
+        h3.font-weight-light.mb-4 = mail_to 'evgenia@ovchinnikova.ru'
+        a.btn.btn-lg.btn-primary.rounded-pill.px-4 href="mailto:evgenia@ovchinnikova.ru" role="button" target="_blank" Say Hello!
+
+.container-fluid.m-0.p-0.bg-light
+  .container.pb-5
+    .row
+      .col
+        p.text-center.small.text-muted.m-0.p-0 © #{Time.now.year}, Евгения Овчинникова

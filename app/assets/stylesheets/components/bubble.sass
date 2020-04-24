@@ -1,0 +1,18 @@
+.mk
+  &-bubble
+    position: relative
+    border-radius: 1rem
+    color: white
+    background: $blue
+    padding-top: 2rem
+    padding-bottom: 2rem
+    padding-left: 2.5rem
+    padding-right: 2.5rem
+
+    &:after
+      content: ' '
+      position: absolute
+      border-bottom: 3rem solid $blue
+      border-left: 3rem solid transparent
+      top: -3rem
+      right: 4rem
