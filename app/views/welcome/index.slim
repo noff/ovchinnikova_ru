@@ -31,10 +31,11 @@
   .container.py-5
     .row.mb-4
       / .col-md-12.col-lg-8.offset-lg-2
-      .col
-        h1.text-uppercase Обо мне
+      .col.text-center
+        h3.mb-0 Обо мне
+        h3 &hellip;
     .row.justify-content-center
-      .col-md-4
+      .col-md-4.mb-4.text-center
         = image_tag 'about.png', class: 'img-fluid'
       .col-md-8
         p Я работаю в жанре детективного триллера, реализма и мистики, но в каком бы жанре ни был роман, повесть или рассказ, мои истории прежде всего о людях. О хороших и не очень, странных и обычных, как вы и я, которые влюбляются, делают трудный выбор, попадают в неприятности, смотрят на мир, дышат и чувствуют. Какими бы ни были мои герои, я люблю их и сочувствую, и вообще люблю все, о чем пишу, потому что любовь – точка, в которой все начинается и к чему все приходит.
@@ -46,50 +47,52 @@
 .container-fluid.m-0.p-0.bg-light
   .container.py-5
     .row.mb-4
-      .col
-        h1.text-uppercase Книги
-    .row.justify-content-center.mb-4
-      .col-md-4
-        .mb-3 = image_tag 'books/mortal-kombat.jpg', class: 'img-fluid'
-        h3 Мортал комбат и другие 90-е
+      .col.text-center
+        h3.mb-0 Книги
+        h3 &hellip;
+    .row
+      .col-md-4.text-center.mb-4
+        .mb-3 = link_to image_tag('books/mortal-kombat.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/640581/', target: '_blank'
+        h6.mb-0 Мортал комбат и другие 90-е
         div Сборник рассказов
-      .col-md-4
-        .mb-3 = image_tag 'books/return.jpg', class: 'img-fluid'
-        h3 Иди и возвращайся
+      .col-md-4.text-center.mb-4
+        .mb-3 = link_to image_tag('books/return.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/677980/', target: '_blank'
+        h6.mb-0 Иди и возвращайся
         div Роман
-      .col-md-4
-        .mb-3 = image_tag 'books/zero.jpg', class: 'img-fluid'
-        h3 Магия Зеро
+      .col-md-4.text-center.mb-4
+        .mb-3 = link_to image_tag('books/zero.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/687775/', target: '_blank'
+        h6.mb-0 Магия Зеро
         div Роман
-    .row.justify-content-center
-      .col-md-4
-        .mb-3 = image_tag 'books/stories.jpg', class: 'img-fluid'
-        h3 Удивительные истории о любви
+    .row
+      .col-md-4.text-center.mb-4
+        .mb-3 = link_to image_tag('books/stories.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/703205/', target: '_blank'
+        h6.mb-0 Удивительные истории о любви
         div Сборник рассказов
-      .col-md-4
-        .mb-3 = image_tag 'books/twist.jpg', class: 'img-fluid'
-        h3 Твист на банке из под шпрот
+      .col-md-4.text-center.mb-4
+        .mb-3 = link_to image_tag('books/twist.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/714800/', target: '_blank'
+        h6.mb-0 Твист на банке из под шпрот
         div Сборник рассказов
-      .col-md-4
-        .mb-3 = image_tag 'books/brick.jpg', class: 'img-fluid'
-        h3 Рукопожатие кирпича
+      .col-md-4.text-center.mb-4
+        .mb-3 = link_to image_tag('books/brick.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/733399/', target: '_blank'
+        h6.mb-0 Рукопожатие кирпича
         div Сборник рассказов
 
 
 
 
-.container-fluid.m-0.p-0.bg-light
+.container-fluid.m-0.p-0
   .container.py-5
     .row
-      .col
-        h1.text-uppercase Contact me
-    .row.justify-content-center.py-5
+      .col.text-center
+        h3.mb-0 Написать мне
+        h3 &hellip;
+    .row.justify-content-center
       .col-md-12.col-lg-10.text-center
-        h3.font-weight-light.mb-4 = mail_to 'evgenia@ovchinnikova.ru'
-        a.btn.btn-lg.btn-primary.rounded-pill.px-4 href="mailto:evgenia@ovchinnikova.ru" role="button" target="_blank" Say Hello!
+        h3.font-weight-light = mail_to 'evgenia@ovchinnikova.ru'
+        / a.btn.btn-lg.btn-primary.rounded-pill.px-4 href="mailto:evgenia@ovchinnikova.ru" role="button" target="_blank" Say Hello!
 
 .container-fluid.m-0.p-0.bg-light
-  .container.pb-5
+  .container
     .row
-      .col
+      .col.py-5
         p.text-center.small.text-muted.m-0.p-0 © #{Time.now.year}, Евгения Овчинникова
