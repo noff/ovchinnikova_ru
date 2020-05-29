@@ -1,0 +1,73 @@
+= render'partials/navbar',
+        active: "books"
+
+.container-fluid.eo-section-fluid
+  .container.eo-section-header
+    .row
+      .col-12
+        h1 Книги
+        nav.eo-navbar-breadcrumb aria-label="breadcrumb"
+          ol.p-0 class="breadcrumb"
+            li class="breadcrumb-item"
+              a href="/" Главная
+            li class="breadcrumb-item active" aria-current="page" Книги
+
+  .container.eo-section
+    .row
+      .col-md-4.mb-6.px-4
+        a href='book_mortal_kombat'
+          .mb-5 = image_tag 'books/book-mortal-kombat.jpg', class: 'img-fluid book-img'
+          / .mb-3 = link_to image_tag('books/book-mortal-kombat.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/640581/', target: '_blank'
+          div
+            .p-1.h3 Мортал комбат и&nbsp;другие&nbsp;90-е
+            .p-1.text-dark Сборник рассказов
+            .p-1.small.text-muted КомпасГид, 2019 г.
+
+      .col-md-4.mb-6.px-4
+        a href='book_return'
+          .mb-5 = image_tag 'books/book-return.jpg', class: 'img-fluid book-img'
+          / .mb-3 = link_to image_tag('books/book-return.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/677980/', target: '_blank'
+          div
+            .p-1.h3 Иди и возвращайся
+            .p-1.text-dark Роман
+            .p-1.small.text-muted КомпасГид, 2019 г.
+
+      .col-md-4.mb-6.px-4
+        a href='book_zero'
+          .mb-5 = image_tag 'books/book-zero.jpg', class: 'img-fluid book-img'
+          / .mb-3 = link_to image_tag('books/book-zero.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/687775/', target: '_blank'
+          div
+            .p-1.h3 Магия Зеро
+            .p-1.text-dark Роман
+            .p-1.small.text-muted КомпасГид, 2019 г.
+
+    .row
+      .col-md-4.mb-6.px-4
+        a href='book_stories'
+          .mb-5 = image_tag 'books/book-stories.jpg', class: 'img-fluid book-img'
+          / .mb-3 = link_to image_tag('books/book-stories.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/703205/', target: '_blank'
+          div
+            .p-1.h3 Удивительные истории о любви
+            .p-1.text-dark Сборник рассказов
+            .p-1.small.text-muted КомпасГид, 2019 г.
+
+      .col-md-4.mb-6.px-4
+        a href='book_twist'
+          .mb-5 = image_tag 'books/book-twist.jpg', class: 'img-fluid book-img'
+          / .mb-3 = link_to image_tag('books/book-twist.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/714800/', target: '_blank'
+          div
+            .p-1.h3 Твист на банке из-под шпрот
+            .p-1.text-dark Сборник рассказов
+            .p-1.small.text-muted КомпасГид, 2019 г.
+
+      .col-md-4.mb-6.px-4
+        a href='book_brick'
+          .mb-5 = image_tag 'books/book-brick.jpg', class: 'img-fluid book-img'
+          / .mb-3 = link_to image_tag('books/book-brick.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/733399/', target: '_blank'
+          div
+            .p-1.h3 Рукопожатие кирпича
+            .p-1.text-dark Сборник рассказов
+            .p-1.small.text-muted КомпасГид, 2019 г.
+
+
+= render "partials/subscription"

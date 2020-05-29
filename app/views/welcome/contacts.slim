@@ -1,0 +1,75 @@
+= render'partials/navbar',
+        active: "contacts"
+
+.container-fluid.eo-section-fluid
+  .container.eo-section-header
+    .row
+      .col-12
+        h1 Контакты
+        nav.eo-navbar-breadcrumb aria-label="breadcrumb"
+          ol.p-0 class="breadcrumb"
+            li class="breadcrumb-item"
+              a href="/" Главная
+            li class="breadcrumb-item active" aria-current="page" Контакты
+
+  .container.eo-section
+    .row
+      .col-12.col-md-6.mb-6
+        h3 Написать сообщение
+        .lead.mb-4 Чтобы связяться со мной, заполните форму:
+        form
+          .form-group
+            label.text-muted for="exampleInputEmail1" Ваше имя
+            input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            / small id="emailHelp" class="form-text text-muted" We'll never share your email with anyone else.
+
+          .form-group
+            label.text-muted for="exampleInputEmail1" Ваш Email
+            input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+
+          .form-group
+            label.text-muted for="exampleInputEmail1" Тема
+            input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+
+          .form-group
+            label.text-muted for="exampleInputEmail1" Ваше сообщение
+            textarea.form-control id="exampleFormControlTextarea1" rows="3"
+
+          .form-group.my-4
+            button.btn.btn-lg.btn-outline-primary.btn-block type="submit" class="" Отправить
+
+      .col-12.col-md-6.px-md-4
+
+        a href='mailto:evgenia_ovchinnikova@gmail.com?subject=Mail from Our Site'
+          .d-flex.align-items-center.mb-4
+            .d-flex.align-items-center.eo-icon-share.justify-content-center.mr-3
+              i.far.fa-envelope.fa-lg
+            .d-flex.flex-column
+              h3.text-dark.m-0 Email
+              .d-none.d-lg-block evgenia_ovchinnikova@gmail.com
+
+        a href='https://www.facebook.com/writer.ovchinnikova' target='_blank'
+          .d-flex.align-items-center.mb-4
+            .d-flex.align-items-center.eo-icon-share.justify-content-center.mr-3
+              i.fab.fa-facebook-f.fa-lg
+            .d-flex.flex-column
+              h3.text-dark.m-0 Facebook
+              .d-none.d-lg-block facebook.com/writer.ovchinnikova
+
+        a href='https://vk.com/eugenia_ovchinnikova' target='_blank'
+          .d-flex.align-items-center.mb-4
+            .d-flex.align-items-center.eo-icon-share.justify-content-center.mr-3
+              i.fab.fa-vk.fa-lg
+            .d-flex.flex-column
+              h3.text-dark.m-0 Вконтакте
+              .d-none.d-lg-block vk.com/eugenia_ovchinnikova
+
+        a href='https://www.instagram.com/evgenia_ovchinnikova_writer/' target='_blank'
+          .d-flex.align-items-center.mb-4
+            .d-flex.align-items-center.eo-icon-share.justify-content-center.mr-3
+              i.fab.fa-instagram.fa-lg
+            .d-flex.flex-column
+              h3.text-dark.m-0 Instagram
+              .d-none.d-lg-block instagram.com/evgenia_ovchinnikova_writer/
+
+= render "partials/subscription"

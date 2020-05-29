@@ -1,4 +1,9 @@
 @import "overrides/custom_bootstrap";
 @import 'bootstrap';
 @import 'includes/*';
+@import 'includes/fontawesome/fontawesome';
+@import 'includes/fontawesome/regular';
+@import 'includes/fontawesome/solid';
+@import 'includes/fontawesome/brands';
+@import 'includes/responsive-typography';
 @import 'components/*';

@@ -1,0 +1,29 @@
+= render'partials/navbar',
+        active: "librarians"
+
+.container-fluid.eo-section-fluid
+  .container.eo-section-header
+    .row
+      .col-12
+        h1 Библиотекарям и&nbspучителям
+        nav.eo-navbar-breadcrumb aria-label="breadcrumb"
+          ol.p-0 class="breadcrumb"
+            li class="breadcrumb-item"
+              a href="/" Главная
+            li class="breadcrumb-item active" aria-current="page" Библиотекарям и учителям
+
+  .container.eo-section
+    .row
+      .col
+        p.lead.mb-5 Материалы для уроков по литературе или занятий в библиотеке. Ниже вы найдете презентации и тезисы. Оба занятия рассчитаны на 40-45 минут, включая сессию вопросов-ответов:
+        hr
+        .px-md-3.py-3
+          a href="/" target='blank'
+            .h3 Проживание травмы в современной литературе для детей и подростков.
+        hr
+        .px-md-3.py-3
+          a href="/" target='blank'
+            .h3 Внутреннее устройство рассказа «Мортал Комбат».
+        hr
+
+= render "partials/subscription"

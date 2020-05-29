@@ -1,0 +1,19 @@
+a href="#{book_url}"
+  .container-fluid class="eo-carousel-bg eo-carousel-bg-#{background}"
+    .container
+      .row.align-items-center.d-none.d-md-flex
+        .col.text-light
+          h1.display-4 = title.html_safe
+        .col
+          = image_tag("#{book_image_url}", alt:"#{title}", class:"img-fluid eo-carousel-book")
+      .d-flex.d-md-none.justify.content-center
+        .col.text-light.text-center
+          h1.my-6 = title.html_safe
+          = image_tag("#{book_image_url}", alt:"#{title}", class:"img-fluid eo-carousel-book")
+
+
+
+          / = link_to image_tag("#{book_image_url}", alt:"#{title}", class:"img-fluid eo-carousel-book"), "#{book_url}"
+
+
+/ = link_to image_tag('books/brick.jpg', alt:"Мортал комбат и другие 90-е", class:"d-block w-100"), 'books'

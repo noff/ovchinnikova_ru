@@ -1,0 +1,17 @@
+.eo
+    &-text
+        &-footer
+            color: rgba(white, 0.5)
+        &-list
+            list-style: none
+            &-item
+                padding-bottom: 1rem
+                &::before
+                    content: "•"
+                    color: $primary
+                    display: inline-block
+                    width: 1em
+                    margin-left: -1em
+        
+        &-quote
+            font-size: 1.5rem

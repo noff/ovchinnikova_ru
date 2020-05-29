@@ -1,0 +1,46 @@
+= render'partials/navbar',
+        active: "read_free"
+
+.container-fluid.eo-section-fluid
+  .container.eo-section-header
+    .row
+      .col-12
+        h1 Читать бесплатно
+        nav.eo-navbar-breadcrumb aria-label="breadcrumb"
+          ol.p-0.eo-bg-transparent class="breadcrumb"
+            li class="breadcrumb-item"
+              a href="/" Главная
+            li class="breadcrumb-item active" aria-current="page" Читать бесплатно
+
+  .container.eo-section
+    .row
+      .col
+        p.lead.mb-5 Список текстов, которые можно прочитать легально бесплатно:
+        hr
+        .px-md-3.py-3
+          a href="/" target='blank'
+            .h3 «Рассказы»
+          .text-dark Часть рассказов из сборника «Мортал комбат и другие 90-е» в списке финалистов на сайте конкурса «Книгуру».
+        hr
+        .px-md-3.py-3
+          a href="/" target='blank'
+            .h3 «Иди и возвращайся»
+          .text-dark Детективный триллер. В списке финалистов на сайте конкурса «Книгуру».
+        hr
+        .px-md-3.py-3
+          a href="/" target='blank'
+            .h3 «Магия Зеро»
+          .text-dark Приключения, детектив. Продолжение «Иди и возвращайся», читается как самостоятельное произведение. В списке финалистов на сайте конкурса «Книгуру».
+        hr
+        .px-md-3.py-3
+          a href="/" target='blank'
+            .h3 «Монолог вампира»
+          .text-dark Рассказ. Финалист премии имени Дмитрия Горчева. Журнал New Style.
+        hr
+        .px-md-3.py-3
+          a href="/" target='blank'
+            .h3 «Немного о священных крокодилах».
+          .text-dark Рассказ. Онлайн-журнал «Прочтение».
+        hr
+
+= render "partials/subscription"

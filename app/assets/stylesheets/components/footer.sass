@@ -1,0 +1,19 @@
+body
+    min-height: 100vh
+    position: relative
+    margin: 0
+    box-sizing: border-box
+    @include media-breakpoint-up(md)
+        padding-bottom: 9rem //height of the footer
+    @include media-breakpoint-down(md)
+        padding-bottom: 18rem //height of the footer
+
+.eo
+    &-footer
+        position: absolute
+        bottom: 0
+        background-color: #495057
+        @include media-breakpoint-up(md)
+            height: 9rem
+        @include media-breakpoint-down(md)
+            height: 18rem

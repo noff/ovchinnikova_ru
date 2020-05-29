@@ -1,0 +1,63 @@
+.eo
+    &-navbar
+        background-color: white
+        box-shadow: 0 0 3px rgba(0,0,0,0.1)
+        padding: 0
+        margin: 0
+        
+        &-breadcrumb
+            font-size: .75rem
+            ol
+                background-color: transparent
+                margin: 0
+            
+            @include media-breakpoint-down(sm)
+                display: none
+            
+        
+        &-logo
+            margin-top: 1.5rem
+            margin-bottom: 1.5rem
+            margin-right: 2rem
+            @include media-breakpoint-up(md)
+                height: 32px
+            @include media-breakpoint-down(md)
+                height: 40px
+        &-link
+
+            text-transform: uppercase
+            text-decoration: none
+            font-weight: 600
+            color: rgba($dark, .65)
+            &:hover
+                text-decoration: none
+                color: $primary
+
+            @include media-breakpoint-up(md)
+                font-size: 13px
+                line-height: 24px
+
+            @include media-breakpoint-down(md)
+                font-size: 18px
+                line-height: 32px
+                //border-top: 1px solid rgba(0,0,0,.1)
+
+        &-item
+            &-active
+                a
+                    color: $primary!important
+                @include media-breakpoint-up(md)
+                    border-bottom: solid 2px $primary
+                @include media-breakpoint-down(md)
+                    border: none
+
+.navbar-toggler > .close
+    display: inline
+
+.navbar-toggler.collapsed > .close, .navbar-toggler:not(.collapsed) > .eo-navbar-toggler-icon
+    display: none
+    width: 32px
+    height: 32px
+
+.eo-navbar-toggler:focus, .eo-navbar-toggler:active
+    outline: none !important
