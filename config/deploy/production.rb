@@ -9,7 +9,7 @@ set :ssh_options,
 
 set :application, "ovchinnikova"
 set :deploy_to, "/home/ovchinnikova/#{fetch(:application)}"
-set :branch, "master"
+set :branch, "production"
 set :rails_env, "production"
 
 set :default_environment,
