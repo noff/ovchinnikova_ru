@@ -1,0 +1,22 @@
+$shadow-color: black
+$shadow-opacity: .04
+.eo
+  &-shadow
+    &-card
+      &-sm
+        box-shadow: 0 1px 2px rgba($shadow-color, $shadow-opacity), 0 2px 3px rgba($shadow-color, $shadow-opacity)
+      &-md
+        box-shadow: 0 1px 2px rgba($shadow-color, $shadow-opacity), 0 2px 3px rgba($shadow-color, $shadow-opacity), 0 4px 6px rgba($shadow-color, $shadow-opacity)
+      &-lg
+        box-shadow: 0 2px 3px rgba($shadow-color, $shadow-opacity), 0 6px 7px rgba($shadow-color, $shadow-opacity), 0 8px 12px rgba($shadow-color, $shadow-opacity), 0 10px 16px rgba($shadow-color, $shadow-opacity)
+      &-xl
+        box-shadow: 0 1px 2px rgba($shadow-color, $shadow-opacity), 0 2px 3px rgba($shadow-color, $shadow-opacity), 0 4px 6px rgba($shadow-color, $shadow-opacity), 0 8px 10px rgba($shadow-color, $shadow-opacity), 0 16px 20px rgba($shadow-color, $shadow-opacity)
+    &-img
+      &-sm
+        filter: drop-shadow(0 .1rem .1rem rgba($shadow-color, $shadow-opacity))
+      &-md
+        filter: drop-shadow(0 .1rem .1rem rgba($shadow-color, $shadow-opacity)) drop-shadow(0 .3rem .3rem rgba($shadow-color, $shadow-opacity))
+      &-lg
+        filter: drop-shadow(0 .1rem .1rem rgba($shadow-color, $shadow-opacity)) drop-shadow(0 .3rem .3rem rgba($shadow-color, $shadow-opacity)) drop-shadow(0 .6rem .6rem rgba($shadow-color, $shadow-opacity))
+      &-xl
+        filter: drop-shadow(0 .2rem .1rem rgba($shadow-color, $shadow-opacity)) drop-shadow(0 .4rem .2rem rgba($shadow-color, $shadow-opacity)) drop-shadow(0 .8rem .4rem rgba($shadow-color, $shadow-opacity)) drop-shadow(0 1.6rem .8rem rgba($shadow-color, $shadow-opacity))

@@ -1,0 +1,9 @@
+.d-flex.h-100.justify-content-center.text-center
+  .d-flex.flex-column.p-3
+    .mb-4
+      = image_tag "books/#{book_cover}.jpg", class: 'img-fluid eo-shadow-card-lg'
+    .d-flex.flex-column.px-2
+      a href="/#{book_link}"
+        h3 = book_title.html_safe
+      .text-muted.mb-1  = book_description.html_safe
+    .mt-auto.py-3 = link_to "#{book_button} →", "/#{book_link}", class: ''

@@ -1,0 +1,72 @@
+= render'partials/navbar',
+        active: "books"
+
+.container-fluid.eo-section-fluid
+  .container.eo-section-header
+    .row
+      .col-12
+        h1 Удивительные истории о любви
+        nav.eo-navbar-breadcrumb aria-label="breadcrumb"
+          ol.p-0 class="breadcrumb"
+            li class="breadcrumb-item"
+              a href="/" Главная
+            li class="breadcrumb-item"
+              a href="books" Книги
+            li class="breadcrumb-item active" aria-current="page" Удивительные истории о любви
+
+  .container.eo-section
+    .row
+      .col-md-4
+        .mb-5.text-center = image_tag 'books/book-stories.jpg', class: 'img-fluid book-img'
+        a.btn.btn-lg.btn-primary.btn-block.mb-4 href="https://www.litres.ru/static/or4/view/or.html?baseurl=/pub/t/45607931.&uuid=cde26e62-ea99-11e9-9468-0cc47a5f137d&art=45607931&trials=1&user=0&file=53664991&trial=1&price=259.00&texttrialbutton=%D0%9A%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D0%BF%D0%BE%D0%BB%D0%BD%D1%83%D1%8E%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8E%20%D0%B7%D0%B0%20259.00&uilang=ru&catalit2&half=1&track_reading&friendly_url=%2Fnarine-abgaryan%2Fudivitelnye-istorii-o-lubvi%2F" role="button" target='blank' Читать отрывок
+        div.mb-2 ISBN: 978-5-17-114804-1
+        div.mb-2 Серия: “Удивительные истории”
+        div.mb-2 Издательство: АСТ, 2019 г.
+        hr
+        h5.mb-3 Купить бумажную книгу
+        .d-flex.justify-content-between
+          a href='https://www.labirint.ru/books/703205/' target='blank' Labirint.ru
+          strong 362 ₽
+        hr
+        h5.mb-3 Скачать электронную книгу
+        .d-flex.justify-content-between
+          a href='https://www.litres.ru/narine-abgaryan/udivitelnye-istorii-o-lubvi/' target='blank' Litres.ru
+          strong 259 ₽
+        hr
+        = render'partials/share_book'
+
+      .col-md-8.pl-md-5
+        h3.mb-3 «Удивительные истории о любви»
+        .lead.mb-5
+          p Здесь не важны жанры - главное, все тексты о любви. И все удивительные. На что вы готовы, чтобы спасти любимых? Чтобы помочь им? А чтобы забыть? Как она выглядит - настоящая любовь? Какие принимает формы?
+          p Обычный таксист бросает все и едет в Питер, чтобы спасти незнакомку.
+          p Рина хочет выжить в лабиринте, кишащем монстрами. Полагаться можно только на голос в рации. Но приведет он ее к спасению или убьет?
+          p Загадочный "Он" много лет охраняет сон девушки и ищет того, кто разбудит ее поцелуем.
+          p Энн и Михаил умирают за других. Это тяжело и больно, а они всего лишь хотят поймать короткие минуты счастья вместе.
+          p Майя играет в шахматы с судьбой, чтобы помочь любимому. А Константин готов пойти на преступление, чтобы Ольга получила право иметь детей.
+          p Удивительные истории. О любви.
+
+.container-fluid.eo-section-fluid.eo-bg-gray
+  .container.eo-section.py-6
+    .row
+      .col
+        h2 Отзывы
+        div.my-6
+          .d-flex.my-3.align-items-center
+            .d-flex.text-center.eo-icon-author.mr-3.align-items-center.justify-content-center
+              div.text-light ПИ
+            .d-flex.flex-column
+              .lead Петрова Ирина
+          p «Сборник симпатичный. Я довольна, что купила и прочитала. Есть в нём рассказы хорошие, есть очень хорошие, а есть супер-пупер классные! И все они, как бусинки на новом ожерелье — блестят, переливаются. И как узоры на снежинках — разные. Удивляют, пугают, веселят, умиляют, вышибают слезу. Из некоторых хочется выхватить цитаты».
+          a href='https://www.labirint.ru/reviews/goods/703205/' target='blank' Подробнее →
+        hr
+        div.my-6
+          .d-flex.my-3.align-items-center
+            .d-flex.text-center.eo-icon-author.mr-3.align-items-center.justify-content-center
+              div.text-light БП
+            .d-flex.flex-column
+              .lead Большакова Полина
+          p «Название сборника полностью себя оправдывает: истории действительно удивительные и необыкновенные, душевные, проникновенные. Я люблю жанр короткого рассказа. Сборник очень подходит для осени - хочется налить себе чаю, сесть на подоконник и читать-читать-читать:) Все рассказы очень разные, каждый по-своему хорош».
+          a href='https://www.labirint.ru/reviews/goods/703205/' target='blank' Подробнее →
+
+= render "partials/subscription"

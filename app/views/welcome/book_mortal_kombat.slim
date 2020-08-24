@@ -1,0 +1,73 @@
+= render'partials/navbar',
+        active: "books"
+
+.container-fluid.eo-section-fluid
+  .container.eo-section-header
+    .row
+      .col-12
+        h1 Мортал комбат и&nbsp;другие&nbsp;90-е
+        nav.eo-navbar-breadcrumb aria-label="breadcrumb"
+          ol.p-0 class="breadcrumb"
+            li class="breadcrumb-item"
+              a href="/" Главная
+            li class="breadcrumb-item"
+              a href="books" Книги
+            li class="breadcrumb-item active" aria-current="page" Мортал комбат и другие 90-е
+
+  .container.eo-section
+    .row
+      .col-md-4
+        .mb-5.text-center = image_tag 'books/book-mortal-kombat.jpg', class: 'img-fluid book-img'
+        a.btn.btn-lg.btn-primary.btn-block.mb-4 href="https://www.litres.ru/static/or4/view/or.html?baseurl=/pub/t/38623875.&uuid=d4bea62b-cf60-11e8-958e-0cc47a5453d6&art=38623875&trials=1&user=0&file=44843394&trial=1&price=199.00&texttrialbutton=%D0%9A%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D0%BF%D0%BE%D0%BB%D0%BD%D1%83%D1%8E%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8E%20%D0%B7%D0%B0%20199.00&uilang=ru&catalit2&half=1&track_reading&friendly_url=%2Fevgeniya-ovchinnikova%2Fmortal-kombat-i-drugie-90-e%2F" role="button" target='blank' Читать отрывок
+        div.mb-2 ISBN: 978-5-00083-450-3
+        div.mb-2 Серия: “Подросток N”
+        div.mb-2 Издательство: КомпасГид, 2018 г.
+        hr
+        h5.mb-3 Купить бумажную книгу
+        .d-flex.justify-content-between
+          a href='https://www.labirint.ru/books/640581/' target='blank' Labirint.ru
+          strong 384 ₽
+        hr
+        h5.mb-3 Скачать электронную книгу
+        .d-flex.justify-content-between
+          a href='https://www.litres.ru/evgeniya-ovchinnikova/mortal-kombat-i-drugie-90-e/' target='blank' Litres.ru
+          strong 199 ₽
+        hr
+        = render('partials/share_book')
+
+      .col-md-8.pl-md-5
+        h3.mb-3 «Мортал комбат и другие 90-е»
+        .lead.mb-5
+          p Дебютный сборник рассказов о детстве в девяностые. Девочка с именем и фамилией как у автора смотрит фильмы в видеосалоне, просит девушку с электростанции не отключать свет, ходит в театр по билетам, полученным в счет зарплаты родителей, участвует в параде в день приезда Михаила Горбачева, охотится за вкладышем от жвачки «Турбо». Рассказы из прошлого обрамлены историей в настоящем, в которой племянник выросшей Жени читает ее рассказы.
+          p Несмотря на схожести моментов биографии, сборник не автобиографический. В рассказах я с точностью и юмором (и любовью, конечно же) постаралась описать обычных людей, живущих в непростое время.
+          p Для среднего школьного возраста и старше. Издательство КомпасГид, 2018 г.
+        ul.eo-text-list
+          li.eo-text-list-item Финалист Всероссийского конкурса на лучшее произведение для детей и юношества «Книгуру» в 2016 - м году.
+          li.eo-text-list-item Финалист Знака «Нравится детям Ленинградской области» в 2018 году.
+          li.eo-text-list-item Вошла в список “Лучшие книги лета - 2018” минского книжного фестиваля «Город и книги».
+          li.eo-text-list-item Вошла в список пяти лучших книг, которые «расскажут подросткам о 90 - х» российского портала об образовании Mel.fm.
+
+.container-fluid.eo-section-fluid.eo-bg-gray
+  .container.eo-section.py-6
+    .row
+      .col
+        h2 Отзывы
+        div.my-6
+          .d-flex.my-3.align-items-center
+            .d-flex.text-center.eo-icon-author.mr-3.align-items-center.justify-content-center
+              div.text-light LM
+            .d-flex.flex-column
+              .lead Lida M
+          p «Когда я взяла книжку в руки, то ждала невразумительной ностальгии с примесью легкого треша, но оказалось, что это настоящая литература. Да, возможно, я предвзята — у меня были похожие истории и с детской влюбленностью в местную звезду (правда, не театра), и со строительством туалета на даче, и даже с собакой за хлебом я ходила так же. Но елки-палки! Это на самом деле увлекательная и стоящая книга — к тому же с примесью метапрозы».
+          a href='https://www.labirint.ru/reviews/goods/640581/' target='blank' Подробнее →
+        hr
+        div.my-6
+          .d-flex.my-3.align-items-center
+            .d-flex.text-center.eo-icon-author.mr-3.align-items-center.justify-content-center
+              div.text-light СП
+            .d-flex.flex-column
+              .lead Соколовская Полина
+          p «Если ваше детство прошло в 90-е, вы собирали вкладыши от жвачек Turbo и Love Is, то эта книга заставит вас понастальгировать, вспомнить жизнь без мобильных телефонов и интернета.  Я отчетливо помню как мы играли во дворе в казаки-разбойники, закапывали «секретики» с картинками, собирали диснеевские журналы и покупали отдельные наклейки для них, выбирали лосины и спортивные костюмы с полосками поярче. Ещё мама заказала мне однажды золотые серёжки, это было прям супер событие, когда их привезли откуда-то из заграницы.  А в «Мортал Комбат» я любила играть со своим старшим братом на приставке, фильм я не смотрела». 
+          a href='https://www.labirint.ru/reviews/goods/640581/' target='blank' Подробнее →
+
+= render "partials/subscription"

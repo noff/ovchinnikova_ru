@@ -1,0 +1,44 @@
+.container-fluid.py-5.eo-footer
+  .container
+    .d-none.d-lg-flex.justify-content-between.pb-5
+      a.eo-link-footer href='/' Главная
+      a.eo-link-footer href='about' Обо мне
+      a.eo-link-footer href='books' Книги
+      / a.eo-link-footer href='meeting' Встречи
+      a.eo-link-footer href='news' Новости
+      a.eo-link-footer href='librarians' Библиотекарям и учителям
+      a.eo-link-footer href='read_free' Читать бесплатно
+      a.eo-link-footer href='contacts' Контакты
+
+    .d-none.d-lg-flex.justify-content-between
+      .d-flex.flex-column.eo-text-footer
+        .small © #{Time.now.year}, Евгения Овчинникова
+        .small Все права защищены.
+      .d-flex
+        .ml-3
+          a.eo-icon-footer href='https://www.facebook.com/writer.ovchinnikova' target='_blank'
+            i.fab.fa-facebook-f.fa-lg
+        .ml-3
+          a.eo-icon-footer href='https://vk.com/eugenia_ovchinnikova' target='_blank'
+            i.fab.fa-vk.fa-lg
+        .ml-3
+          a.eo-icon-footer href='https://www.instagram.com/evgenia_ovchinnikova_writer/' target='_blank'
+            i.fab.fa-instagram.fa-lg
+
+    .d-flex.d-lg-none.justify-content-center.py-4
+      .flex-column.justify-content-center
+        .d-flex.justify-content-center.mb-4
+          = link_to image_tag('logo/eo-logo-footer.svg'), '/', class:"img-fluid"
+        .d-flex.justify-content-center.mb-4
+          .p-3
+            a.eo-icon-footer href='https://www.facebook.com/writer.ovchinnikova' target='_blank'
+              i.fab.fa-facebook-f.fa-2x
+          .p-3
+            a.eo-icon-footer href='https://vk.com/eugenia_ovchinnikova' target='_blank'
+              i.fab.fa-vk.fa-2x
+          .p-3
+            a.eo-icon-footer href='https://www.instagram.com/evgenia_ovchinnikova_writer/' target='_blank'
+              i.fab.fa-instagram.fa-2x
+        .d-flex.flex-column.text-center.eo-text-footer
+          .small © #{Time.now.year}, Евгения Овчинникова
+          .small Все права защищены.

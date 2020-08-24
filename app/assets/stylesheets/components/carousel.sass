@@ -1,0 +1,30 @@
+.eo
+    &-carousel
+        &-book
+            transform: rotate(7deg)
+            margin-top: 50px
+            margin-bottom: -50px
+            box-shadow: 20px 20px 20px rgba(black, .4)
+            @include media-breakpoint-up(md)
+                width: 400px
+        &-bg
+            width: 100%
+            @include media-breakpoint-up(md)
+                height: 600px
+            @include media-breakpoint-down(md)
+                height: 495px
+            @include media-breakpoint-down(sm)
+                height: 80vh
+            
+            &-mortal_kombat
+                background-image: radial-gradient(50% 238%, #BA4552 0%, #410A30 100%)
+            &-return
+                background-image: radial-gradient(50% 238%, #55cb6a 0%, #172e1e 100%)
+            &-zero
+                background-image: radial-gradient(50% 238%, #9a0b66 0%, #121741 100%)
+            &-stories
+                background-image: radial-gradient(50% 238%, #0e7d0a 0%, #121741 100%)
+            &-twist
+                background-image: radial-gradient(50% 238%, #6a0a0a 0%, #121741 100%)
+            &-brick
+                background-image: radial-gradient(50% 238%, #5c4431 0%, #121741 100%)
