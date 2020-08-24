@@ -69,5 +69,13 @@
             .p-1.text-dark Сборник рассказов
             .p-1.small.text-muted КомпасГид, 2019 г.
 
+      .col-md-4.mb-6.px-4
+        a href='book_vecherinka'
+          .mb-5 = image_tag 'books/book-vecherinka.jpg', class: 'img-fluid book-img'
+          / .mb-3 = link_to image_tag('books/book-brick.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/733399/', target: '_blank'
+          div
+            .p-1.h3 Вечеринка с&nbsp;карликами
+            .p-1.text-dark Сборник рассказов
+            .p-1.small.text-muted Издательские решения, 2020 г.
 
 = render "partials/subscription"

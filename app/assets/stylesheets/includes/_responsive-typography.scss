@@ -1,21 +1,21 @@
 html {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 @include media-breakpoint-up(sm) {
     html {
-        font-size: 15;
+        font-size: 16;
     }
 }
 
 @include media-breakpoint-up(md) {
     html {
-        font-size: 16px;
+        font-size: 17px;
     }
 }
 
 @include media-breakpoint-up(lg) {
     html {
-        font-size: 17px;
+        font-size: 18px;
     }
 }

@@ -1,0 +1,100 @@
+/ Swiper
+.container-fluid.eo-section-fluid.eo-bg-gray
+  .container.eo-section.py-6
+    .row.justify-content-center
+      .col-12.col-md-8.text-center
+        h2.font-weight-bold Книги
+        h4.font-weight-bold.text-primary • • •
+    .row
+      .col-12
+        div class="swiper-container-case"
+          div class="swiper-wrapper"
+            div class="swiper-slide" style="height: auto;"
+              = render 'partials/swiper_book_unit',
+                      book_cover: 'book-mortal-kombat',
+                      book_title: 'Мортал комбат и&nbsp;другие&nbsp;90-е',
+                      book_description: 'Сборник рассказов',
+                      book_button: 'Подробнее',
+                      book_link: 'book_mortal_kombat'
+            div class="swiper-slide" style="height: auto;"
+              = render 'partials/swiper_book_unit',
+                      book_cover: 'book-return',
+                      book_title: 'Иди и&nbsp;возвращайся',
+                      book_description: 'Роман',
+                      book_button: 'Подробнее',
+                      book_link: 'book_return'
+            div class="swiper-slide" style="height: auto;"
+              = render 'partials/swiper_book_unit',
+                      book_cover: 'book-zero',
+                      book_title: 'Магия Зеро',
+                      book_description: 'Роман',
+                      book_button: 'Подробнее',
+                      book_link: 'book_zero'
+            div class="swiper-slide" style="height: auto;"
+              = render 'partials/swiper_book_unit',
+                      book_cover: 'book-stories',
+                      book_title: 'Удивительные истории о любви',
+                      book_description: 'Сборник рассказов',
+                      book_button: 'Подробнее',
+                      book_link: 'book_stories'
+            div class="swiper-slide" style="height: auto;"
+              = render 'partials/swiper_book_unit',
+                      book_cover: 'book-twist',
+                      book_title: 'Твист на банке из-под шпрот',
+                      book_description: 'Сборник рассказов',
+                      book_button: 'Подробнее',
+                      book_link: 'book_twist'
+            div class="swiper-slide" style="height: auto;"
+              = render 'partials/swiper_book_unit',
+                      book_cover: 'book-brick',
+                      book_title: 'Рукопожатие кирпича',
+                      book_description: 'Сборник рассказов',
+                      book_button: 'Подробнее',
+                      book_link: 'book_brick'
+            div class="swiper-slide" style="height: auto;"
+              = render 'partials/swiper_book_unit',
+                      book_cover: 'book-vecherinka',
+                      book_title: 'Вечеринка с&nbsp;карликами',
+                      book_description: 'Сборник рассказов',
+                      book_button: 'Подробнее',
+                      book_link: 'book_vecherinka'
+
+          <!-- Add Pagination -->
+          / div class="swiper-pagination"
+          <!-- Add Arrows -->
+          div class="swiper-button-next"
+          div class="swiper-button-prev"
+
+javascript:
+    var swiperCase = new Swiper('.swiper-container-case', {
+        setWrapperSize: true,
+        loop: true,
+        loopFillGroupWithBlank: false,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 30
+            },
+            720: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+        },
+    })

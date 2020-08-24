@@ -3,15 +3,26 @@ body
   overflow-x: hidden
 
 
-.mk
+.eo
   &-hero
     &-bg
-      color: white
-      min-height: 100%
-      background-size: cover
-      background-position: center
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      @include media-breakpoint-up(md)
+        height: 600px
+      @include media-breakpoint-down(md)
+        height: 500px
+      @include media-breakpoint-down(sm)
+        height: 400px
+      background-image: radial-gradient(50% 238%, #BA4552 0%, #410A30 100%)
+      overflow: hidden
+      //min-height: 100%
+      //background-size: cover
+      //background-position: center
       //background-image: linear-gradient(134deg, #1a0608 0%, #663c3d 100%);
-      background-image: asset_url('bg.jpg')
+      //background-image: asset_url('bg.jpg')
 
     &-img
       &__right
@@ -26,10 +37,18 @@ body
           max-height: 700px
 
       &__center
-        //display: flex
-        margin-left: -5%
-        margin-top: -90%
-        width: 200%
+        display: flex
+        justify-self: center
+        @include media-breakpoint-up(md)
+          height: 700px
+          margin-bottom: -100px
+        @include media-breakpoint-down(md)
+          height: 600px
+          margin-bottom: -100px
+        @include media-breakpoint-down(sm)
+          height: 400px
+          margin-bottom: -100px
+
 
 
 

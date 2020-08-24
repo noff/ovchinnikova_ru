@@ -1,60 +1,67 @@
 = render'partials/navbar',
         active: "home"
 
-div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel"
-  ol class="carousel-indicators"
-    li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
-    li data-target="#carouselExampleIndicators" data-slide-to="1"
-    li data-target="#carouselExampleIndicators" data-slide-to="2"
 
-  .carousel-inner
-    .carousel-item.active.eo-carousel-slide-1
-      / = link_to image_tag('books/brick.jpg', alt:"Мортал комбат и другие 90-е", class:"d-block w-100"), 'books'
-      = render'partials/slides',
-              title: "Мортал комбат и другие 90-е",
-              book_image_url: "books/mortal-kombat.jpg",
-              background: "mortal_kombat",
-              book_url: "book_mortal_kombat"
+.container-fluid class="eo-hero-bg"
+  .container
+    .d-flex.justify-content-center
+      a href='books'
+        = image_tag("books/books-collage.png", alt: "Книги", class: "eo-hero-img__center mx-auto")
 
-    .carousel-item.eo-carousel-slide-2
-      / = link_to image_tag('books/mortal-kombat.jpg', alt:"Иди и возвращайся", class:"d-block w-100"), 'books'
-      = render'partials/slides',
-              title: "Иди и возвращайся",
-              book_image_url: "books/return.jpg",
-              background: "return",
-              book_url: "book_return"
-
-    .carousel-item.eo-carousel-slide-3
-      / = link_to image_tag('books/return.jpg', alt:"Магия Зеро", class:"d-block w-100"), 'books'
-      = render'partials/slides',
-              title: "Магия Зеро",
-              book_image_url: "books/return.jpg",
-              background: "zero",
-              book_url: "book_zero"
-
-    .carousel-item.eo-carousel-slide-4
-      / = link_to image_tag('books/return.jpg', alt: "Удивительные истории о любви", class: "d-block w-100"), 'books'
-      = render 'partials/slides',
-              title: "Удивительные истории о любви",
-              book_image_url: "books/stories.jpg",
-              background: "mortal_kombat",
-              book_url: "book_mortal_kombat"
-
-    .carousel-item.eo-carousel-slide-5
-      / = link_to image_tag('books/return.jpg', alt: "Твист на банке из под шпрот", class: "d-block w-100"), 'books'
-      = render 'partials/slides',
-              title: "Твист на банке из под шпрот",
-              book_image_url: "books/twist.jpg",
-              background: "twist",
-              book_url: "book_twist"
-
-    .carousel-item.eo-carousel-slide-6
-      / = link_to image_tag('books/return.jpg', alt: "Рукопожатие кирпича и другие свидетельства о 90-х", class: "d-block w-100"), 'books'
-      = render 'partials/slides',
-              title: "Рукопожатие кирпича",
-              book_image_url: "books/brick.jpg",
-              background: "brick",
-              book_url: "book_brick"
+/ div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel"
+/   ol class="carousel-indicators"
+/     li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
+/     li data-target="#carouselExampleIndicators" data-slide-to="1"
+/     li data-target="#carouselExampleIndicators" data-slide-to="2"
+/
+/   .carousel-inner
+/     .carousel-item.active.eo-carousel-slide-1
+/       / = link_to image_tag('books/brick.jpg', alt:"Мортал комбат и другие 90-е", class:"d-block w-100"), 'books'
+/       = render'partials/slides',
+/               title: "Мортал комбат и другие 90-е",
+/               book_image_url: "books/mortal-kombat.jpg",
+/               background: "mortal_kombat",
+/               book_url: "book_mortal_kombat"
+/
+/     .carousel-item.eo-carousel-slide-2
+/       / = link_to image_tag('books/mortal-kombat.jpg', alt:"Иди и возвращайся", class:"d-block w-100"), 'books'
+/       = render'partials/slides',
+/               title: "Иди и возвращайся",
+/               book_image_url: "books/return.jpg",
+/               background: "return",
+/               book_url: "book_return"
+/
+/     .carousel-item.eo-carousel-slide-3
+/       / = link_to image_tag('books/return.jpg', alt:"Магия Зеро", class:"d-block w-100"), 'books'
+/       = render'partials/slides',
+/               title: "Магия Зеро",
+/               book_image_url: "books/return.jpg",
+/               background: "zero",
+/               book_url: "book_zero"
+/
+/     .carousel-item.eo-carousel-slide-4
+/       / = link_to image_tag('books/return.jpg', alt: "Удивительные истории о любви", class: "d-block w-100"), 'books'
+/       = render 'partials/slides',
+/               title: "Удивительные истории о любви",
+/               book_image_url: "books/stories.jpg",
+/               background: "mortal_kombat",
+/               book_url: "book_mortal_kombat"
+/
+/     .carousel-item.eo-carousel-slide-5
+/       / = link_to image_tag('books/return.jpg', alt: "Твист на банке из под шпрот", class: "d-block w-100"), 'books'
+/       = render 'partials/slides',
+/               title: "Твист на банке из под шпрот",
+/               book_image_url: "books/twist.jpg",
+/               background: "twist",
+/               book_url: "book_twist"
+/
+/     .carousel-item.eo-carousel-slide-6
+/       / = link_to image_tag('books/return.jpg', alt: "Рукопожатие кирпича и другие свидетельства о 90-х", class: "d-block w-100"), 'books'
+/       = render 'partials/slides',
+/               title: "Рукопожатие кирпича",
+/               book_image_url: "books/brick.jpg",
+/               background: "brick",
+/               book_url: "book_brick"
 
   a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"
     span class="carousel-control-prev-icon" aria-hidden="true"
@@ -64,8 +71,8 @@ div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-rid
     span class="carousel-control-next-icon" aria-hidden="true"
     span class="sr-only" Next
 
-.container-fluid.py-6
-  .container
+.container-fluid
+  .container.py-6
     .row.mb-6
       .col.text-center
         h2 Об авторе
@@ -75,14 +82,10 @@ div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-rid
         = image_tag 'about.jpg', class: 'img-fluid mb-6'
       .col-12.col-md-8
         p.lead.mb-4 Я работаю в жанре детективного триллера, реализма и мистики, но в каком бы жанре ни был роман, повесть или рассказ, мои истории прежде всего о людях. О хороших и не очень, странных и обычных, как вы и я, которые влюбляются, делают трудный выбор, попадают в неприятности, смотрят на мир, дышат и чувствуют. Какими бы ни были мои герои, я люблю их и сочувствую, и вообще люблю все, о чем пишу, потому что любовь – точка, в которой все начинается и к чему все приходит.
-        / p Я родилась в Уссурийске, выросла в Кокшетау. Когда была подростком, моя семья снова переехала на Дальний Восток, в город Арсеньев. Там я окончила университет и сразу после переехала в Петербург. Частые переезды разбудили любовь к путешествиям, и теперь они – мое хобби. Я не коллекционирую поездки, а храню каждую из них в сердце – улицы, дома, дороги, людей, обычную жизнь, которой живут в другой культуре, на другой стороне земного шара.
-        / p Читать я обожала с детства, но никогда не думала, что стану писателем. Я окончила ДВГТУ по специальности «Экономика машиностроения», почти сразу основала собственную ИТ-компанию. В 2012-м году из любопытства пошла учиться в Литературную мастерскую Андрея Аствацатурова и Дмитрия Орехова, а в 2016-м, после особенно эмоциональной лекции по подтексту, села и написала рассказ «Эммануэль», который позже вошел в дебютный сборник «Мортал комбат и другие 90-е».
-        / p Мои книги трижды становились финалистами Всероссийского конкурса на лучшее литературное произведение для детей и юношества «Книгуру», а один рассказ стал финалистом премии имени Дмитрия Горчева.
-        / p Я живу в Петербурге с мужем, двумя детьми и тремя ахатинами.
-        a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-lg href="about" role="button" target="_blank" Подробнее →
+        a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="about" role="button" target="_parent" Подробнее →
 
-.container-fluid.py-6
-  .container
+.container-fluid.eo-bg-gray
+  .container.py-6
     .row
       .col-12
         .row.mb-4
@@ -97,10 +100,10 @@ div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-rid
             a href='book_mortal_kombat'
               h2 Мортал комбат и другие 90-е
               p.text-dark Сборник рассказов
-            .lead.my-4
+            .my-4
               p Дебютный сборник рассказов о детстве в девяностые. Девочка с именем и фамилией как у автора смотрит фильмы в видеосалоне, просит девушку с электростанции не отключать свет, ходит в театр по билетам, полученным в счет зарплаты родителей, участвует в параде в день приезда Михаила Горбачева, охотится за вкладышем от жвачки «Турбо». Рассказы из прошлого обрамлены историей в настоящем, в которой племянник выросшей Жени читает ее рассказы.
               p Несмотря на схожести моментов биографии, сборник не автобиографический. В рассказах я с точностью и юмором (и любовью, конечно же) постаралась...
-            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-lg href="book_mortal_kombat" role="button" Подробнее →
+            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_mortal_kombat" role="button" Подробнее →
 
         .row.py-4
           .col-md-4
@@ -109,10 +112,10 @@ div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-rid
             a href='book_return'
               h2 Иди и возвращайся
               p.text-dark Роман
-            .lead.my-4
+            .my-4
               p Детективный триллер в питерских декорациях. Мать Нины пропала без вести, и ни отец, ни полиция не нашли зацепок. Три года спустя, когда Нина и папа научились жить вдвоем, на телефон Нины приходит анонимная смс «дорогая я здесь удали это сообщение». Нина начинает собственное расследование, чтобы выяснить, что скрывал все это время отец, следователь и бывшие коллеги мамы.
               p Эта книга пришла ко мне, когда я гуляла центру Питера холодной затянувшейся весной 2017-го года. Я думала об одинокой, грустной девочке, которая мечется по городу в поисках матери и… – не может найти. В каждом прохожем четырнадцатилетняя Нина видит его персонального монстра, доисторическое...
-            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-lg href="book_return" role="button" Подробнее →
+            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_return" role="button" Подробнее →
 
         .row.py-4
           .col-md-4
@@ -121,10 +124,10 @@ div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-rid
             a href='book_zero'
               h2 Магия Зеро
               p.text-dark Роман
-            .lead.my-4
+            .my-4
               p Детективный триллер, продолжение книги «Иди и возвращайся», читается как отдельное произведение.
               p После переезда из Питера семья Нины год прожила на Сицилии. Начинаются летние каникулы, и в гости приезжают друзья детства – Настя и Ваня. Совершенно случайно они спасают незнакомого человека, случайно попадают в его дом и крадут оттуда четырнадцать песчанок с красными лампочками на головах – тоже случайно, разумеется. Оставаться дома нельзя, потому что за песчанками идет настоящая охота...
-            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-lg href="book_zero" role="button" Подробнее →
+            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_zero" role="button" Подробнее →
 
         .row.py-4
           .col-md-4
@@ -133,12 +136,12 @@ div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-rid
             a href='book_stories'
               h2 Удивительные истории о любви
               p.text-dark Сборник рассказов
-            .lead.my-4
+            .my-4
               p Здесь не важны жанры - главное, все тексты о любви. И все удивительные. На что вы готовы, чтобы спасти любимых? Чтобы помочь им? А чтобы забыть? Как она выглядит - настоящая любовь? Какие принимает формы?
               p Обычный таксист бросает все и едет в Питер, чтобы спасти незнакомку.
               p Рина хочет выжить в лабиринте, кишащем монстрами. Полагаться можно только на голос в рации. Но приведет он ее к спасению или убьет?
               p Загадочный "Он" много лет охраняет сон девушки и ищет того, кто...
-            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-lg href="book_stories" role="button" Подробнее →
+            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_stories" role="button" Подробнее →
 
         .row.py-4
           .col-md-4
@@ -147,10 +150,10 @@ div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-rid
             a href='book_twist'
               h2 Твист на банке из под шпрот
               p.text-dark Сборник рассказов
-            .lead.my-4
+            .my-4
               p Книга собрана из рассказов, отмеченных по результатам конкурса среди выпускников мастерских CWS, созданных несколько лет назад Майей Кучерской.
               p Спектр тем и сюжетов - самый широкий. Это и истории любви, и семейные драмы (и комедии), и детство, и старость, и офисные - полярные - консервные будни… Московская пробка и парижское кладбище. Фантастика и сугубый реализм. Объединяет рассказы одно: точное авторское зрение, умение сказать коротко о многом и цельно - о разном.
-            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-lg href="book_twist" role="button" Подробнее →
+            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_twist" role="button" Подробнее →
 
         .row.py-4
           .col-md-4.text-center.pr-0.pr-md-4
@@ -159,39 +162,50 @@ div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-rid
             a href='book_brick'
               h2 Рукопожатие кирпича и другие свидетельства о 90-х
               p.text-dark Сборник рассказов
-            .lead.my-4
+            .my-4
               p Российские девяностые уже много лет как являются предметом активного художественного и философского осмысления, и общественного консенсуса относительно этого периода пока нет и в ближайшем времени, судя по всему, не предвидится. Отчасти это связано с тем, что ещё слишком свежи и порой болезненны воспоминания об этом времени, отчасти с тем, что "невозможность объяснить явление до конца - свидетельство его подлинности", как сформулировал один замечательный современный писатель и историк, писавший в том числе и о девяностых.
               p В этот сборник вошли произведения трёх десятков литераторов - совершенно разных по мировоззрению, стилистике, эстетическим...
-            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-lg href="book_brick" role="button" Подробнее →
+            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_brick" role="button" Подробнее →
 
-.container-fluid.eo-section-fluid
-  .container.eo-section
-    .row
-      .col.text-center
-        h2 Новости
-        h4.font-weight-bold.text-center.text-primary • • •
-    .row
-      .col-12.col-md-4.mb-6
-        a href='news'
-          .mb-3 = image_tag'news/news-1.jpg', class:"img-fluid"
-          p.small.text-muted 9 Декабря, 2019
-          h4 Fly of appear god third also years for spirit.
-          p.text-dark Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
-          div Подробнее →
-      .col-12.col-md-4.mb-6
-        a href='news'
-          .mb-3 = image_tag'news/news-1.jpg', class:"img-fluid"
-          p.small.text-muted 9 Декабря, 2019
-          h4 Fly of appear god third also years for spirit.
-          p.text-dark Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
-          div Подробнее →
-      .col-12.col-md-4.mb-6
-        a href='news'
-          .mb-3 = image_tag'news/news-1.jpg', class:"img-fluid"
-          p.small.text-muted 9 Декабря, 2019
-          h4 Fly of appear god third also years for spirit.
-          p.text-dark Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
-          div Подробнее →
+        .row.py-4
+          .col-md-4.text-center.pr-0.pr-md-4
+            = link_to image_tag('books/book-vecherinka.jpg', class: 'img-fluid book-img mb-4'), 'book_brick'
+          .col-md-8
+            a href='book_vecherinka'
+              h2 Вечеринка с&nbsp;карликами
+              p.text-dark Сборник рассказов
+            .my-4
+              p Сборник рассказов «Вечеринка с карликами» посвящен взрослению, моменту, когда человек осознает, что простился с детством. Авторы сборника работают в разных жанрах — от реализма до постмодернизма, но все тексты объединяет попытка понять: что делает нас взрослыми? И все ли из нас взрослеют? Что вообще такое жизнь взрослого человека, жизнь за гранью «18+»? Книга содержит нецензурную брань.
+              a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_vecherinka" role="button" Подробнее →
 
-= render "partials/contact"
+/ .container-fluid.eo-section-fluid
+/   .container.eo-section
+/     .row
+/       .col.text-center
+/         h2 Новости
+/         h4.font-weight-bold.text-center.text-primary • • •
+/     .row
+/       .col-12.col-md-4.mb-6
+/         a href='news'
+/           .mb-3 = image_tag'news/news-1.jpg', class:"img-fluid"
+/           p.small.text-muted 9 Декабря, 2019
+/           h4 Fly of appear god third also years for spirit.
+/           p.text-dark Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
+/           div Подробнее →
+/       .col-12.col-md-4.mb-6
+/         a href='news'
+/           .mb-3 = image_tag'news/news-1.jpg', class:"img-fluid"
+/           p.small.text-muted 9 Декабря, 2019
+/           h4 Fly of appear god third also years for spirit.
+/           p.text-dark Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
+/           div Подробнее →
+/       .col-12.col-md-4.mb-6
+/         a href='news'
+/           .mb-3 = image_tag'news/news-1.jpg', class:"img-fluid"
+/           p.small.text-muted 9 Декабря, 2019
+/           h4 Fly of appear god third also years for spirit.
+/           p.text-dark Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
+/           div Подробнее →
+
+/ = render "partials/contact"
 = render "partials/subscription"

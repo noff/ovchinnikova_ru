@@ -26,12 +26,12 @@
             li.nav-item.active.eo-navbar-item
               a.nav-link.eo-navbar-link href='books' Книги
 
-          - if !(defined? active) || active == "meeting"
-            li.nav-item.active.eo-navbar-item.eo-navbar-item-active
-              a.nav-link.eo-navbar-link href='meeting' Встречи
-          - else
-            li.nav-item.active.eo-navbar-item
-              a.nav-link.eo-navbar-link href='meeting' Встречи
+          / - if !(defined? active) || active == "meeting"
+          /   li.nav-item.active.eo-navbar-item.eo-navbar-item-active
+          /     a.nav-link.eo-navbar-link href='meeting' Встречи
+          / - else
+          /   li.nav-item.active.eo-navbar-item
+          /     a.nav-link.eo-navbar-link href='meeting' Встречи
 
           - if !(defined? active) || active == "news"
             li.nav-item.active.eo-navbar-item.eo-navbar-item-active

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'book_stories', to: 'welcome#book_stories'
   get 'book_twist', to: 'welcome#book_twist'
   get 'book_brick', to: 'welcome#book_brick'
+  get 'book_vecherinka', to: 'welcome#book_vecherinka'
   get 'meeting', to: 'welcome#meeting'
   get 'news', to: 'welcome#news'
   get 'librarians', to: 'welcome#librarians'
