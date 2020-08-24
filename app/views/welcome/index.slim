@@ -1,3 +1,6 @@
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=284092448364523&autoLogAppEvents=1" nonce="nMbykcuL"></script>
+
 = render'partials/navbar',
         active: "home"
 
@@ -94,7 +97,7 @@
             h4.font-weight-bold.text-center.text-primary • • •
 
         .row.py-4
-          .col-md-4
+          .col-md-4.text-center.pr-0.pr-md-4
             = link_to image_tag('books/book-mortal-kombat.jpg', class: 'img-fluid book-img mb-4'), 'book_mortal_kombat'
           .col-md-8
             a href='book_mortal_kombat'
@@ -106,7 +109,7 @@
             a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_mortal_kombat" role="button" Подробнее →
 
         .row.py-4
-          .col-md-4
+          .col-md-4.text-center.pr-0.pr-md-4
             = link_to image_tag('books/book-return.jpg', class: 'img-fluid book-img mb-4'), 'book_return'
           .col-md-8
             a href='book_return'
@@ -118,7 +121,7 @@
             a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_return" role="button" Подробнее →
 
         .row.py-4
-          .col-md-4
+          .col-md-4.text-center.pr-0.pr-md-4
             = link_to image_tag('books/book-zero.jpg', class: 'img-fluid book-img mb-4'), 'book_zero'
           .col-md-8
             a href='book_zero'
@@ -130,7 +133,7 @@
             a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_zero" role="button" Подробнее →
 
         .row.py-4
-          .col-md-4
+          .col-md-4.text-center.pr-0.pr-md-4
             = link_to image_tag('books/book-stories.jpg', class: 'img-fluid book-img mb-4'), 'book_stories'
           .col-md-8
             a href='book_stories'
@@ -144,7 +147,7 @@
             a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_stories" role="button" Подробнее →
 
         .row.py-4
-          .col-md-4
+          .col-md-4.text-center.pr-0.pr-md-4
             = link_to image_tag('books/book-twist.jpg', class: 'img-fluid book-img mb-4'), 'book_twist'
           .col-md-8
             a href='book_twist'
@@ -178,6 +181,42 @@
               p Сборник рассказов «Вечеринка с карликами» посвящен взрослению, моменту, когда человек осознает, что простился с детством. Авторы сборника работают в разных жанрах — от реализма до постмодернизма, но все тексты объединяет попытка понять: что делает нас взрослыми? И все ли из нас взрослеют? Что вообще такое жизнь взрослого человека, жизнь за гранью «18+»? Книга содержит нецензурную брань.
               a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_vecherinka" role="button" Подробнее →
 
+
+    / .row
+    /   .col.text-center
+    /     h2 Новости
+    /     h4.font-weight-bold.text-center.text-primary • • •
+
+.container-fluid.eo-section-fluid.mb-8
+  .container.eo-section
+    .row.align-items-center
+      .col-12.d-block.d-md-none.text-center
+        h2.font-weight-bold Новости
+        h4.font-weight-bold.text-center.text-primary • • •
+      .col-12.d-block.d-md-none.text-center
+        <div class="fb-page" data-href="https://www.facebook.com/writer.ovchinnikova/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/writer.ovchinnikova/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/writer.ovchinnikova/">Евгения Овчинникова</a></blockquote></div>
+
+
+
+.container-fluid.eo-section-fluid
+  .container.eo-section
+    .row.align-items-center
+      .col-12.col-md-7.col-lg-8.mb-6.text-center.text-md-left
+        h2.font-weight-bold Подписаться на новости
+        p.lead.mb-5 Лучший способ быть в курсе последних событий. Оставляйте свой email и получайте самые свежие новости на почту.
+        div class="input-group input-group-lg"
+          div class="input-group-prepend"
+            span class="input-group-text" id="addon-wrapping"
+              i.fas.fa-envelope.fa-1x.p-0.m-0
+          input type="text" class="form-control" placeholder="Ваш email" aria-label="Username" aria-describedby="addon-wrapping"
+          div.d-none.d-lg-flex class="input-group-append"
+            button class="btn btn-primary" type="button" id="button" Подписаться
+
+          div.d-flex.d-lg-none.my-3 class="input-group"
+            button class="btn btn-lg btn-primary eo-btn-cta" type="button" id="button" Подписаться
+      .col-md-5.col-lg-4.d-none.d-md-block
+        <div class="fb-page" data-href="https://www.facebook.com/writer.ovchinnikova/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/writer.ovchinnikova/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/writer.ovchinnikova/">Евгения Овчинникова</a></blockquote></div>
+
 / .container-fluid.eo-section-fluid
 /   .container.eo-section
 /     .row
@@ -208,4 +247,4 @@
 /           div Подробнее →
 
 / = render "partials/contact"
-= render "partials/subscription"
+/ = render "partials/subscription"
