@@ -25,6 +25,19 @@ html
     meta name="msapplication-TileColor" content="#e54059"
     meta name="theme-color" content="#E54059"
 
+    javascript:
+        (function (r) {
+            window.r46 = window.r46 || function () {
+                (r46.q = r46.q || []).push(arguments)
+            };
+            var s = document.getElementsByTagName(r)[0], rs = document.createElement(r);
+            rs.async = 1;
+            rs.src = '//cdn.rees46.com/v3.js';
+            s.parentNode.insertBefore(rs, s);
+        })('script');
+        // Init everything
+        r46('init', "#{Rails.application.credentials.r46_api_key}");
+
 
   body
     script src="https://unpkg.com/swiper/swiper-bundle.min.js"

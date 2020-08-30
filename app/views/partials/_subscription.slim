@@ -6,16 +6,19 @@
         h4.font-weight-bold.text-primary • • •
         p.lead.mb-5 Лучший способ быть в курсе последних событий. Оставляйте свой email и получайте самые свежие новости на почту.
 
-        div class="input-group input-group-lg"
-          div class="input-group-prepend"
-            span class="input-group-text" id="addon-wrapping"
-              i.fas.fa-envelope.fa-1x.p-0.m-0
-          input type="text" class="form-control" placeholder="Ваш email" aria-label="Username" aria-describedby="addon-wrapping"
-          div.d-none.d-md-flex class="input-group-append"
-            button class="btn btn-primary" type="button" id="button" Подписаться
+        .alert.alert-success.d-none#subscribedmessage Спасибо! Теперь вы в списке.
 
-          div.d-flex.d-md-none.my-3 class="input-group"
-            button class="btn btn-lg btn-primary eo-btn-cta" type="button" id="button" Подписаться
+        form#subscribemailing
+          div class="input-group input-group-lg"
+            div class="input-group-prepend"
+              span class="input-group-text" id="addon-wrapping"
+                i.fas.fa-envelope.fa-1x.p-0.m-0
+            input#subscribemailingfield type="email" class="form-control" placeholder="Ваш email" aria-label="Username" aria-describedby="addon-wrapping" name="email"
+            div.d-none.d-md-flex class="input-group-append"
+              input class="btn btn-primary" type="submit" id="button" value="Подписаться"
+
+            div.d-flex.d-md-none.my-3 class="input-group"
+              input class="btn btn-lg btn-primary eo-btn-cta" type="submit" id="button" value="Подписаться"
 
         / form action="" method="post" target="_blank"
         /   .form-row.mb-4
