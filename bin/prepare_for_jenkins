@@ -1,0 +1,14 @@
+#!/bin/bash
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+ruby_version=`cat Gemfile|grep ^ruby|awk '{print $2}'|sed "s/'//g"`
+rvm install $ruby_version
+rvm use $ruby_version
+ruby -v
+
+bundler_version=`cat Gemfile.lock | grep -A 1 'BUNDLED WITH' | tail -n 1 | sed 's/ *//'`
+gem install bundler:$bundler_version
+bundle -v
+
+bundle install
