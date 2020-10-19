@@ -1,0 +1,28 @@
+#!/bin/bash
+
+BRANCH_NAME=$1
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+ruby_version=`cat Gemfile|grep ^ruby|awk '{print $2}'|sed "s/'//g"`
+rvm use $ruby_version
+ruby -v
+bundle -v
+
+echo "deploy branch: $BRANCH_NAME"
+
+case "$BRANCH_NAME" in
+
+  "origin/production")
+    cap production deploy
+  ;;
+
+  "origin/master")
+    cap staging deploy
+  ;;
+
+  *)
+    echo "deploy undefined"
+  ;;
+
+esac
