@@ -13,4 +13,4 @@ set :branch, "production"
 set :rails_env, "production"
 
 set :default_environment,
-    "RUBY_VERSION" => "ruby 2.4.4"
+    "RUBY_VERSION" => "ruby 2.7.0"

@@ -25,7 +25,7 @@ set :repo_url, "git@github.com:noff/ovchinnikova_ru.git"
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/master.key"
-append :linked_files, "config/master.key"
+append :linked_files, "config/master.key", 'config/database.yml'
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
@@ -48,7 +48,7 @@ set :ssh_options,     forward_agent: true
 set :use_sudo,        false
 
 set :rvm_type, :user
-set :rvm_ruby_version, "2.4.4"
+set :rvm_ruby_version, "2.7.0"
 
 set :assets_roles, %i[web app]
 
