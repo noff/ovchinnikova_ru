@@ -50,5 +50,9 @@ set :use_sudo,        false
 set :rvm_type, :user
 set :rvm_ruby_version, "2.7.0"
 
+set :nvm_type, :user # or :system, depends on your nvm setup
+set :nvm_node, 'v15.0.1'
+set :nvm_map_bins, %w{node npm yarn}
+
 set :assets_roles, %i[web app]
 
