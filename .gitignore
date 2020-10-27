@@ -13,6 +13,9 @@
 !/log/.keep
 !/tmp/.keep
 
+
+.yarn
+
 /config/database.yml
 
 .idea
