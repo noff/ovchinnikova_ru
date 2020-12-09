@@ -40,20 +40,20 @@
           /   li.nav-item.active.eo-navbar-item
           /     a.nav-link.eo-navbar-link href='news' Новости
 
-          - if Post.exists?
-            - if !(defined? active) || active == "librarians"
-              li.nav-item.active.eo-navbar-item.eo-navbar-item-active
-                a.nav-link.eo-navbar-link href='librarians' Библиотекарям и учителям
-            - else
-              li.nav-item.active.eo-navbar-item
-                a.nav-link.eo-navbar-link href='librarians' Библиотекарям и учителям
-
-          - if !(defined? active) || active == "news"
+          - if !(defined? active) || active == "librarians"
             li.nav-item.active.eo-navbar-item.eo-navbar-item-active
-              a.nav-link.eo-navbar-link href='/news' Новости
+              a.nav-link.eo-navbar-link href='librarians' Библиотекарям и учителям
           - else
             li.nav-item.active.eo-navbar-item
-              a.nav-link.eo-navbar-link href='/news' Новости
+              a.nav-link.eo-navbar-link href='librarians' Библиотекарям и учителям
+
+          - if Post.exists?
+            - if !(defined? active) || active == "news"
+              li.nav-item.active.eo-navbar-item.eo-navbar-item-active
+                a.nav-link.eo-navbar-link href='/news' Новости
+            - else
+              li.nav-item.active.eo-navbar-item
+                a.nav-link.eo-navbar-link href='/news' Новости
 
           - if !(defined? active) || active == "read_free"
             li.nav-item.active.eo-navbar-item.eo-navbar-item-active
