@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'librarians', to: 'welcome#librarians'
   get 'read_free', to: 'welcome#read_free'
   get 'contacts', to: 'welcome#contacts'
+  get 'audio_video', to: 'welcome#audio_video'
 
   root to: 'welcome#index'
 end
