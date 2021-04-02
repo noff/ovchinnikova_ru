@@ -1,0 +1,68 @@
+- content_for :title, 'Никому не рассказывай – Евгения Овчинникова'
+
+= render'partials/navbar',
+        active: "books"
+
+.container-fluid.eo-section-fluid
+  .container.eo-section-header
+    .row
+      .col-12
+        h1 Никому не рассказывай
+        nav.eo-navbar-breadcrumb aria-label="breadcrumb"
+          ol.p-0 class="breadcrumb"
+            li class="breadcrumb-item"
+              a href="/" Главная
+            li class="breadcrumb-item"
+              a href="books" Книги
+            li class="breadcrumb-item active" aria-current="page" Никому не рассказывай
+
+  .container.eo-section
+    .row
+      .col-md-4
+        .mb-5.text-center = image_tag 'books/book-dont-tell.jpg', class: 'img-fluid book-img'
+        a.btn.btn-lg.btn-primary.btn-block.mb-4 href="https://www.labirint.ru/books/789744/" role="button" target='blank' Купить
+        div.mb-2 ISBN: 978-5-907180-61-1
+        div.mb-2 Серия: “Рассказы Волчка”
+        div.mb-2 Издательство: Волчок, 2021 г.
+        hr
+        h5.mb-3 Купить бумажную книгу
+        .d-flex.justify-content-between
+          a href='https://www.labirint.ru/books/789744/' target='blank' Лабиринт
+          strong 160 ₽
+        hr
+        = render('partials/share_book')
+
+      .col-md-8.pl-md-5
+        h3.mb-3 «Никому не рассказывай»
+        .lead.mb-5
+          p Сборник рассказов современных авторов, восьмой из серии "Рассказы Волчка". Его основная линия - тайны, недосказанности, и первые удивительные открытия в жизни.
+          p Мой рассказ называется "Вайя". Он о том, как новый человек становится частью огромной семьи.
+          p Кроме моего, в сборник вошли рассказы Ирины Богатыревой, Нины Дашевской, Екатерины Исаевой, Натальи Ключаревой и Дмитрия Сиротина.
+        ul.eo-text-list
+          li.eo-text-list-item Для среднего школьного возраста и старше.
+
+/ .container-fluid.eo-section-fluid.eo-bg-gray
+  .container.eo-section.py-6
+    .row
+      .col
+        h2 Отзывы
+        div.my-6
+          .d-flex.my-3.align-items-center
+            .d-flex.text-center.eo-icon-author.mr-3.align-items-center.justify-content-center
+              div.text-light АC
+            .d-flex.flex-column
+              .lead Андрей Степанов
+              .small.text-muted Писатель, переводчик, профессор СПБГУ
+          p «В большинстве случаев это «исповедальная проза», реальные случаи из реальной жизни. Но если автор пишет только о том, что было, он(а) чувствует, что чего-то недостает. Тогда начинают чуть преувеличивать, чуть приукрашать. И вот тут уже многое зависит от фантазии, начитанности и чувства меры. Может получиться нечто просто не очень правдоподобное, а может — нечто правдоподобное, но в рамках новеллы. Вот, наверное, в том, чтобы элемент вымысла был хорошо и со смыслом дозирован, и состоит секрет».
+          / a href='https://www.labirint.ru/books/687775/' target='blank' Подробнее →
+        hr
+        div.my-6
+          .d-flex.my-3.align-items-center
+            .d-flex.text-center.eo-icon-author.mr-3.align-items-center.justify-content-center
+              div.text-light М
+            .d-flex.flex-column
+              .lead Марина
+          p «Фантазия некоторых авторов впечатляет! Хичкок бы заценил саспенс, а Зощенко чувство юмора! Не все рассказы поняла, но там, где есть сюжет - очень круто! Спасибо!»
+          / a href='https://www.labirint.ru/books/687775/' target='blank' Подробнее →
+
+= render "partials/subscription"
