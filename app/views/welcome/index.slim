@@ -135,6 +135,18 @@ script async="async" defer="defer" crossorigin="anonymous" src="https://connect.
 
         .row.py-4
           .col-md-4.text-center.pr-0.pr-md-4
+            = link_to image_tag('books/common-people.jpg', class: 'img-fluid book-img mb-4'), 'book_common_people'
+          .col-md-8
+            a href='book_common_people'
+              h2 Обычные люди
+              p.text-dark Роман
+            .my-4
+              p Детективно-приключенческий триллер, завершающий трилогию «Иди и возвращайся». Читается как отдельное произведение.
+              p Прошло четыре года с момента последних приключений на Сицилии. Нина с семьей живет теперь в Сан-Франциско и учится в художественном колледже. Она избавилась от преследующих ее чудовищ, вышла из кризиса и наладила отношения с родителями. У нее новые друзья, дом с собственной мастерской и смешная собака. Но в день открытия ее персональной выставки происходит чудовищное - прямо посреди блестящего вечера похищают девочку, ровесницу Нины. После этого все рушится. Нине приходится бежать, менять города и страны, скрываться и драться. Но самое главное - она узнает тайну своего происхождения.
+              a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_common_people" role="button" Подробнее →
+
+        .row.py-4
+          .col-md-4.text-center.pr-0.pr-md-4
             = link_to image_tag('books/book-stories.jpg', class: 'img-fluid book-img mb-4'), 'book_stories'
           .col-md-8
             a href='book_stories'
@@ -192,6 +204,7 @@ script async="async" defer="defer" crossorigin="anonymous" src="https://connect.
             .my-4
               p Сборник рассказов современных авторов, восьмой из серии "Рассказы Волчка". Его основная линия - тайны, недосказанности, и первые удивительные открытия в жизни.
               a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_ne_rasskazivay" role="button" Подробнее →
+
 
 
     / .row
