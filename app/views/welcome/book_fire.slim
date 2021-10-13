@@ -1,0 +1,45 @@
+- content_for :title, 'Сквозь огонь – Евгения Овчинникова'
+
+= render'partials/navbar',
+        active: "books"
+
+.container-fluid.eo-section-fluid
+  .container.eo-section-header
+    .row
+      .col-12
+        h1 Сквозь огонь
+        nav.eo-navbar-breadcrumb aria-label="breadcrumb"
+          ol.p-0 class="breadcrumb"
+            li class="breadcrumb-item"
+              a href="/" Главная
+            li class="breadcrumb-item"
+              a href="books" Книги
+            li class="breadcrumb-item active" aria-current="page" Сквозь огонь
+
+  .container.eo-section
+    .row
+      .col-md-4
+        .mb-5.text-center = image_tag 'books/book-fire.jpg', class: 'img-fluid book-img'
+        a.btn.btn-lg.btn-primary.btn-block.mb-4 href="https://www.litres.ru/static/or4/view/or.html?baseurl=/pub/t/66483860.&art=66483860&trials=1&user=412063754&file=89447522&buser=1&price=224.10&texttrialbutton=Запросить&uilang=ru&catalit2&half=1&track_reading&friendly_url=%2Fevgeniya-ovchinnikova%2Fskvoz-ogon%2F" role="button" target='blank' Читать отрывок
+        / div.mb-2 ISBN: 978-5-00083-744-3
+        / div.mb-2 Серия: “Иди и возвращайся”
+        div.mb-2 ЛитРес: Издательство, 2021 г.
+        hr
+        h5.mb-3 Скачать электронную книгу
+        .d-flex.justify-content-between
+          a href='https://www.litres.ru/evgeniya-ovchinnikova/skvoz-ogon/' target='blank' Litres.ru
+        hr
+        h5.mb-3 Слушать аудиокнигу
+        .d-flex.justify-content-between
+          a href='https://www.litres.ru/evgeniya-ovchinnikova/skvoz-ogon-66553390/' target='blank' Litres.ru
+        hr
+        = render('partials/share_book')
+
+      .col-md-8.pl-md-5
+        h3.mb-3 «Сквозь огонь»
+        .lead.mb-5
+          p Я начала писать "Сквозь огонь" как детектив, в котором встречается всего много и сразу: мертвая девочка-подросток, таинственное исчезновение ее тела, апокалиптический пожар, маленький городок в тайге, переплетение прошлого и настоящего. Все так и получилось, но для меня текст романа вышел за рамки обычной литературной работы. Я побывала в голове каждого из героев, жила их эмоциями - болью, грустью, любовью, виной и раскаянием. "Сквозь огонь" для меня как автора стал настоящим потрясением, в работе с которым я буквально прошла через пламя и воду.
+          p Если кратко описывать сюжет, то он - о расследовании убийства двадцатилетней давности. А для меня лично этот роман - о тоске по утраченному человеку и времени, когда события можно было изменить.
+          p Пожалуй, мой самый сильный, глубокий и правдивый, почти исповедальный текст.
+
+= render "partials/subscription"

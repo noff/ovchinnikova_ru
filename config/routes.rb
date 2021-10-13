@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'book_mortal_kombat', to: 'welcome#book_mortal_kombat'
   get 'book_return', to: 'welcome#book_return'
   get 'book_zero', to: 'welcome#book_zero'
+  get 'book_fire', to: 'welcome#book_fire'
   get 'book_stories', to: 'welcome#book_stories'
   get 'book_twist', to: 'welcome#book_twist'
   get 'book_brick', to: 'welcome#book_brick'
