@@ -1,0 +1,48 @@
+- content_for :title, 'Сокровища – Евгения Овчинникова'
+
+= render'partials/navbar',
+        active: "books"
+
+.container-fluid.eo-section-fluid
+  .container.eo-section-header
+    .row
+      .col-12
+        h1 Сокровища
+        nav.eo-navbar-breadcrumb aria-label="breadcrumb"
+          ol.p-0 class="breadcrumb"
+            li class="breadcrumb-item"
+              a href="/" Главная
+            li class="breadcrumb-item"
+              a href="books" Книги
+            li class="breadcrumb-item active" aria-current="page" Сокровища
+
+  .container.eo-section
+    .row
+      .col-md-4
+        .mb-5.text-center = image_tag 'books/book-treasure.jpg', class: 'img-fluid book-img'
+        a.btn.btn-lg.btn-primary.btn-block.mb-4 href="http://kniguru.info/korotkii-spisok-trinadtsatogo-sezona/sokrovishcha-eovchinnikova" role="button" target='blank' Читать
+        / div.mb-2 ISBN: 978-5-00083-744-3
+        / div.mb-2 Серия: “Иди и возвращайся”
+        / div.mb-2 ЛитРес: Издательство, 2021 г.
+        / hr
+        / h5.mb-3 Скачать электронную книгу
+        / .d-flex.justify-content-between
+        /   a href='https://www.litres.ru/evgeniya-ovchinnikova/skvoz-ogon/' target='blank' Litres.ru
+        / hr
+        / h5.mb-3 Слушать аудиокнигу
+        / .d-flex.justify-content-between
+        /   a href='https://www.litres.ru/evgeniya-ovchinnikova/skvoz-ogon-66553390/' target='blank' Litres.ru
+        hr
+        = render('partials/share_book')
+
+      .col-md-8.pl-md-5
+        h3.mb-3 «Сокровища»
+        .lead.mb-5
+          p Реалистическая повесть о девочке Асе, которая проводит лето в деревне в семье тети. В большой семье каждый занят своим делом. Ася хранит и перепрятывает сокровища и воюет со злым индюком. Тетя делает коньяк из самогона и мечтает заработать на его продаже. Дядя не может решить, ломать ли сарай или чинить. Двоюродные сестры-подростки бесконечно красятся и болтают о мальчиках. Старшая сестра приезжает из города, молча ложится на кровать, несколько недель не встает и не рассказывает, почему. А бабушка...
+          p Каждого персонажа я хранила у себя в голове и оберегала, как сокровище. А теперь дарю их вам. Эта книга полна счастья и радости, их я черпала из самой глубины души, оттуда, где сохранились нежные и нетронутые взрослой жизнью воспоминания любимых людях.
+          p Действие происходит в середине девяностых в безымянной деревне в Северном Казахстане.
+          ul
+            li Лауреат конкурса "Белая ворона" в 2022-м году.
+            li Финалист Всероссийского конкурса на лучшее произведение для детей и юношества «Книгуру» в 2022-м году.
+
+= render "partials/subscription"

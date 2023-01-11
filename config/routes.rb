@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'about', to: 'welcome#about'
   get 'books', to: 'welcome#books'
+  get 'book_treasure', to: 'welcome#book_treasure'
   get 'book_mortal_kombat', to: 'welcome#book_mortal_kombat'
   get 'book_return', to: 'welcome#book_return'
   get 'book_zero', to: 'welcome#book_zero'
