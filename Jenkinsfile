@@ -1,79 +1,62 @@
+import groovy.json.JsonOutput
+SUCCESS_STAGE = 'Build'
+STEPS = 'Build Testing Deploy'
+def stepPublisher(step, style) {
+  rabbitMQPublisher(rabbitName: 'rabbit', exchange: '', routingKey: 'notification', conversion: false,
+    data: JsonOutput.toJson([type: "deploy", project: JOB_NAME, style: style, step: step, message: GIT_COMMIT_MSG, commit: GIT_COMMIT, url: COMMIT_URL, author: GIT_COMMIT_AUTHOR, console: "${BUILD_URL}console", steps: STEPS, channel: 'channel:name:apps']))
+}
+
 pipeline {
-    agent any
+  agent any
 
-    parameters {
+  stages {
 
-      string(name: 'CHANNEL_NAME',
-             description: 'Default Slack channel to send messages to',
-             defaultValue: '#monitoring')
-
-      string(name: 'BASE_URL',
-             description: 'Default Slack BASE URL',
-             defaultValue: 'https://rees46.slack.com/services/hooks/jenkins-ci')
-
-      string(name: 'TOKEN_ID',
-             description: 'Default Slack secret Credential token id (from jenkins Credential)',
-             defaultValue: 'rees46_slack_id')
-
-    }
-
-    environment {
-      // Slack configuration
-      SLACK_COLOR_DANGER  = '#E01563'
-      SLACK_COLOR_INFO    = '#6ECADC'
-      SLACK_COLOR_WARNING = '#FFC300'
-      SLACK_COLOR_GOOD    = '#3EB991'
-    }
-
-    stages {
-
-        stage('Build') {
-            steps {
-
-              echo "Sending message to Slack"
-
-              slackSend (color: "${env.SLACK_COLOR_INFO}",
-                         channel: "${params.CHANNEL_NAME}",
-                         baseUrl: "${params.BASE_URL}",
-                         tokenCredentialId: "${params.TOKEN_ID}",
-                         message: "*STARTED:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}")
-
-              sh 'bin/prepare_for_jenkins'
-            }
+    stage('Build') {
+      steps {
+        script {
+          env.GIT_COMMIT_MSG = sh (script: 'git log -1 --pretty=%B ${GIT_COMMIT}', returnStdout: true).trim()
+          env.GIT_COMMIT_AUTHOR = sh (script: 'git log -1 --pretty=%an ${GIT_COMMIT}', returnStdout: true).trim()
+          env.COMMIT_URL = "https://github.com/noff/ovchinnikova_ru/commits/${GIT_COMMIT}"
         }
-
-        stage('Testing') {
-            steps {
-                sh 'bin/testing'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                sh "bin/deploy ${env.GIT_BRANCH}"
-            }
-        }
-
-    }
-
-    post {
-      failure {
-        echo "Sending message to Slack"
-        slackSend (color: "${env.SLACK_COLOR_DANGER}",
-                   channel: "${params.CHANNEL_NAME}",
-                   baseUrl: "${params.BASE_URL}",
-                   tokenCredentialId: "${params.TOKEN_ID}",
-                   message: "*FAILED:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}")
-      }
-
-      success {
-        echo "Sending message to Slack"
-        slackSend (color: "${env.SLACK_COLOR_GOOD}",
-                   channel: "${params.CHANNEL_NAME}",
-                   baseUrl: "${params.BASE_URL}",
-                   tokenCredentialId: "${params.TOKEN_ID}",
-                   message: "*SUCCESS:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}")
+    
+        sh 'bin/prepare_for_jenkins'
       }
     }
 
+    stage('Testing') {
+      steps {
+        script {
+          SUCCESS_STAGE = 'Testing'
+        }
+        stepPublisher(SUCCESS_STAGE, 'SECONDARY')
+
+        sh 'bin/testing'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        script {
+          SUCCESS_STAGE = 'Deploy'
+        }
+        stepPublisher(SUCCESS_STAGE, 'SECONDARY')
+
+        sh "bin/deploy ${env.GIT_BRANCH}"
+      }
+    }
+  }
+
+  post {
+    failure {
+      stepPublisher(SUCCESS_STAGE, 'ERROR')
+    }
+
+    aborted {
+      stepPublisher(SUCCESS_STAGE, 'WARNING')
+    }
+
+    success {
+      stepPublisher(SUCCESS_STAGE, 'SUCCESS')
+    }
+  }
 }
