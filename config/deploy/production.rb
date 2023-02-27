@@ -17,4 +17,4 @@ set :nvm_node, 'v15.0.1'
 set :nvm_map_bins, %w{node npm yarn}
 
 set :default_environment,
-    "RUBY_VERSION" => "ruby 2.7.0"
+    "RUBY_VERSION" => "ruby 2.7.5"

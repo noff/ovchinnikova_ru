@@ -13,4 +13,4 @@ set :branch, "master"
 set :rails_env, "staging"
 
 set :default_environment,
-    "RUBY_VERSION" => "ruby 2.7.0"
+    "RUBY_VERSION" => "ruby 2.7.5"

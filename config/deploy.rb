@@ -50,7 +50,7 @@ set :ssh_options,     forward_agent: true
 set :use_sudo,        false
 
 set :rvm_type, :user
-set :rvm_ruby_version, "2.7.0"
+set :rvm_ruby_version, "2.7.5"
 
 set :nvm_type, :user # or :system, depends on your nvm setup
 set :nvm_node, 'v15.0.1'
