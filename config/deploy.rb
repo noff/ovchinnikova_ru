@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
+require 'capistrano/nvm'
+
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.11.0"
+# lock "~> 3.11.0"
 
 set :application, "ovchinnikova_rails"
 set :user, "ovchinnikova"
@@ -25,7 +27,7 @@ set :repo_url, "git@github.com:noff/ovchinnikova_ru.git"
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/master.key"
-append :linked_files, "config/master.key"
+append :linked_files, "config/master.key", 'config/database.yml'
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
@@ -48,7 +50,11 @@ set :ssh_options,     forward_agent: true
 set :use_sudo,        false
 
 set :rvm_type, :user
-set :rvm_ruby_version, "2.4.4"
+set :rvm_ruby_version, "2.7.5"
+
+set :nvm_type, :user # or :system, depends on your nvm setup
+set :nvm_node, 'v15.0.1'
+set :nvm_map_bins, %w{node npm yarn}
 
 set :assets_roles, %i[web app]
 

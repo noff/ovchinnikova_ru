@@ -1,15 +1,16 @@
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=284092448364523&autoLogAppEvents=1" nonce="nMbykcuL"></script>
+- content_for :title, 'Евгения Овчинникова, писательница'
+
+div id="fb-root"
+script async="async" defer="defer" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=284092448364523&autoLogAppEvents=1" nonce="nMbykcuL"
 
 = render'partials/navbar',
         active: "home"
 
-
-.container-fluid class="eo-hero-bg"
+.container-fluid class="eo-hero-bg-2021"
   .container
     .d-flex.justify-content-center
       a href='books'
-        = image_tag("books/books-collage.png", alt: "Книги", class: "eo-hero-img__center mx-auto")
+        = image_tag("books-collage-2021-6.png", alt: "Книги", class: "mx-auto img-fluid")
 
 / div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel"
 /   ol class="carousel-indicators"
@@ -98,6 +99,30 @@
 
         .row.py-4
           .col-md-4.text-center.pr-0.pr-md-4
+            = link_to image_tag('books/book-treasure.jpg', class: 'img-fluid book-img mb-4'), 'book_treasure'
+          .col-md-8
+            a href='book_treasure'
+              h2 Сокровища
+              p.text-dark Повесть
+            .my-4
+              p Реалистическая повесть о девочке Асе, которая проводит лето в деревне в семье тети. В большой семье каждый занят своим делом. Ася хранит и перепрятывает сокровища и воюет со злым индюком. Тетя делает коньяк из самогона и мечтает заработать на его продаже. Дядя не может решить, ломать ли сарай или чинить. Двоюродные сестры-подростки бесконечно красятся и болтают о мальчиках. Старшая сестра приезжает из города, молча ложится на кровать, несколько недель не встает и не рассказывает, почему. А бабушка...
+            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_treasure" role="button" Подробнее →
+
+
+        .row.py-4
+          .col-md-4.text-center.pr-0.pr-md-4
+            = link_to image_tag('books/book-fire.jpg', class: 'img-fluid book-img mb-4'), 'book_fire'
+          .col-md-8
+            a href='book_fire'
+              h2 Сквозь огонь
+              p.text-dark Роман
+            .my-4
+              p Я начала писать "Сквозь огонь" как детектив, в котором встречается всего много и сразу: мертвая девочка-подросток, таинственное исчезновение ее тела, апокалиптический пожар, маленький городок в тайге, переплетение прошлого и настоящего. Все так и получилось, но для меня текст романа вышел за рамки обычной литературной работы. Я побывала в голове каждого из героев, жила их эмоциями - болью, грустью, любовью, виной и раскаянием. "Сквозь огонь" для меня как автора стал настоящим потрясением, в работе с которым я буквально прошла через пламя и воду.
+            a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_fire" role="button" Подробнее →
+
+
+        .row.py-4
+          .col-md-4.text-center.pr-0.pr-md-4
             = link_to image_tag('books/book-mortal-kombat.jpg', class: 'img-fluid book-img mb-4'), 'book_mortal_kombat'
           .col-md-8
             a href='book_mortal_kombat'
@@ -131,6 +156,18 @@
               p Детективный триллер, продолжение книги «Иди и возвращайся», читается как отдельное произведение.
               p После переезда из Питера семья Нины год прожила на Сицилии. Начинаются летние каникулы, и в гости приезжают друзья детства – Настя и Ваня. Совершенно случайно они спасают незнакомого человека, случайно попадают в его дом и крадут оттуда четырнадцать песчанок с красными лампочками на головах – тоже случайно, разумеется. Оставаться дома нельзя, потому что за песчанками идет настоящая охота...
             a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_zero" role="button" Подробнее →
+
+        .row.py-4
+          .col-md-4.text-center.pr-0.pr-md-4
+            = link_to image_tag('books/common-people.jpg', class: 'img-fluid book-img mb-4'), 'book_common_people'
+          .col-md-8
+            a href='book_common_people'
+              h2 Обычные люди
+              p.text-dark Роман
+            .my-4
+              p Детективно-приключенческий триллер, завершающий трилогию «Иди и возвращайся». Читается как отдельное произведение.
+              p Прошло четыре года с момента последних приключений на Сицилии. Нина с семьей живет теперь в Сан-Франциско и учится в художественном колледже. Она избавилась от преследующих ее чудовищ, вышла из кризиса и наладила отношения с родителями. У нее новые друзья, дом с собственной мастерской и смешная собака. Но в день открытия ее персональной выставки происходит чудовищное - прямо посреди блестящего вечера похищают девочку, ровесницу Нины. После этого все рушится. Нине приходится бежать, менять города и страны, скрываться и драться. Но самое главное - она узнает тайну своего происхождения.
+              a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_common_people" role="button" Подробнее →
 
         .row.py-4
           .col-md-4.text-center.pr-0.pr-md-4
@@ -172,7 +209,7 @@
 
         .row.py-4
           .col-md-4.text-center.pr-0.pr-md-4
-            = link_to image_tag('books/book-vecherinka.jpg', class: 'img-fluid book-img mb-4'), 'book_brick'
+            = link_to image_tag('books/book-vecherinka.jpg', class: 'img-fluid book-img mb-4'), 'book_vecherinka'
           .col-md-8
             a href='book_vecherinka'
               h2 Вечеринка с&nbsp;карликами
@@ -180,6 +217,18 @@
             .my-4
               p Сборник рассказов «Вечеринка с карликами» посвящен взрослению, моменту, когда человек осознает, что простился с детством. Авторы сборника работают в разных жанрах — от реализма до постмодернизма, но все тексты объединяет попытка понять: что делает нас взрослыми? И все ли из нас взрослеют? Что вообще такое жизнь взрослого человека, жизнь за гранью «18+»? Книга содержит нецензурную брань.
               a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_vecherinka" role="button" Подробнее →
+
+        .row.py-4
+          .col-md-4.text-center.pr-0.pr-md-4
+            = link_to image_tag('books/book-dont-tell.jpg', class: 'img-fluid book-img mb-4'), 'book_ne_rasskazivay'
+          .col-md-8
+            a href='book_ne_rasskazivay'
+              h2 Никому не рассказывай
+              p.text-dark Сборник рассказов
+            .my-4
+              p Сборник рассказов современных авторов, восьмой из серии "Рассказы Волчка". Его основная линия - тайны, недосказанности, и первые удивительные открытия в жизни.
+              a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_ne_rasskazivay" role="button" Подробнее →
+
 
 
     / .row
@@ -215,7 +264,9 @@
           div.d-flex.d-lg-none.my-3 class="input-group"
             button class="btn btn-lg btn-primary eo-btn-cta" type="button" id="button" Подписаться
       .col-md-5.col-lg-4.d-none.d-md-block
-        <div class="fb-page" data-href="https://www.facebook.com/writer.ovchinnikova/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/writer.ovchinnikova/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/writer.ovchinnikova/">Евгения Овчинникова</a></blockquote></div>
+        div class="fb-page" data-href="https://www.facebook.com/writer.ovchinnikova/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"
+          blockquote cite="https://www.facebook.com/writer.ovchinnikova/" class="fb-xfbml-parse-ignore"
+            a href="https://www.facebook.com/writer.ovchinnikova/" Евгения Овчинникова
 
 / .container-fluid.eo-section-fluid
 /   .container.eo-section

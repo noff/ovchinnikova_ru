@@ -47,12 +47,27 @@
             li.nav-item.active.eo-navbar-item
               a.nav-link.eo-navbar-link href='librarians' Библиотекарям и учителям
 
+          - if Post.exists?
+            - if !(defined? active) || active == "news"
+              li.nav-item.active.eo-navbar-item.eo-navbar-item-active
+                a.nav-link.eo-navbar-link href='/news' Новости
+            - else
+              li.nav-item.active.eo-navbar-item
+                a.nav-link.eo-navbar-link href='/news' Новости
+
           - if !(defined? active) || active == "read_free"
             li.nav-item.active.eo-navbar-item.eo-navbar-item-active
               a.nav-link.eo-navbar-link href='read_free' Бесплатно
           - else
             li.nav-item.active.eo-navbar-item
               a.nav-link.eo-navbar-link href='read_free' Бесплатно
+
+          - if !(defined? active) || active == "audio_video"
+            li.nav-item.active.eo-navbar-item.eo-navbar-item-active
+              a.nav-link.eo-navbar-link href='audio_video' Аудио и ТВ
+          - else
+            li.nav-item.active.eo-navbar-item
+              a.nav-link.eo-navbar-link href='audio_video' Аудио и ТВ
 
           - if !(defined? active) || active == "contacts"
             li.nav-item.active.eo-navbar-item.eo-navbar-item-active

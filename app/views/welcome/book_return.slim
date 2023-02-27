@@ -1,3 +1,5 @@
+- content_for :title, 'Иди и возвращайся – Евгения Овчинникова'
+
 = render'partials/navbar',
         active: "books"
 
@@ -32,6 +34,11 @@
         .d-flex.justify-content-between
           a href='https://www.litres.ru/evgeniya-ovchinnikova/idi-i-vozvraschaysya/' target='blank' Litres.ru
           strong 199 ₽
+        hr
+        h5.mb-3 Слушать аудиокнигу
+        .d-flex.justify-content-between
+          a href='https://www.litres.ru/evgeniya-ovchinnikova/idi-i-vozvraschaysya-63614987/' target='blank' Litres.ru
+          / strong 199 ₽
         hr
         = render'partials/share_book'
 

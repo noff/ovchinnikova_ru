@@ -1,3 +1,5 @@
+- content_for :title, 'Новости – Евгения Овчинникова, писательница'
+
 = render'partials/navbar',
         active: "news"
 
@@ -13,40 +15,42 @@
             li class="breadcrumb-item active" aria-current="page" Новости
 
   .container.eo-section
-    .row
-      .col
-        .pb-3 = link_to image_tag('news/news-1.jpg', alt: "First slide", class: "img-fluid"), 'news'
-        p.small.text-muted 9 Декабря, 2019
-        h4 Fly of appear god third also years for spirit.
-        p Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
-        a.btn.btn-outline-primary.px-3 href="news" role="button" target="_blank" Подробнее →
-    .row.mb-7
-      .col
-        .pb-3 = link_to image_tag('news/news-1.jpg', alt: "First slide", class: "img-fluid"), 'news'
-        p.small.text-muted 9 Декабря, 2019
-        h4 Fly of appear god third also years for spirit.
-        p Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
-        a.btn.btn-outline-primary.px-3 href="news" role="button" target="_blank" Подробнее →
-    .row.mb-7
-      .col
-        .pb-3 = link_to image_tag('news/news-1.jpg', alt: "First slide", class: "img-fluid"), 'news'
-        p.small.text-muted 9 Декабря, 2019
-        h4 Fly of appear god third also years for spirit.
-        p Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
-        a.btn.btn-outline-primary.px-3 href="news" role="button" target="_blank" Подробнее →
-    .row.mb-7
-      .col
-        .pb-3 = link_to image_tag('news/news-1.jpg', alt: "First slide", class: "img-fluid"), 'news'
-        p.small.text-muted 9 Декабря, 2019
-        h4 Fly of appear god third also years for spirit.
-        p Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
-        a.btn.btn-outline-primary.px-3 href="news" role="button" target="_blank" Подробнее →
-    .row.mb-7
-      .col
-        .pb-3 = link_to image_tag('news/news-1.jpg', alt: "First slide", class: "img-fluid"), 'news'
-        p.small.text-muted 9 Декабря, 2019
-        h4 Fly of appear god third also years for spirit.
-        p Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
-        a.btn.btn-outline-primary.px-3 href="news" role="button" target="_blank" Подробнее →
+    - Post.order(id: :desc).each do |post|
+      .row.mb-7
+        .col
+          / .pb-3 = link_to image_tag('news/news-1.jpg', alt: "First slide", class: "img-fluid"), 'news'
+          p.small.text-muted = l(post.created_at, format: :short)
+          h4 = post.title
+          p = post.body.html_safe
+          / a.btn.btn-outline-primary.px-3 href="news" role="button" target="_blank" Подробнее →
+    / .row.mb-7
+    /   .col
+    /     .pb-3 = link_to image_tag('news/news-1.jpg', alt: "First slide", class: "img-fluid"), 'news'
+    /     p.small.text-muted 9 Декабря, 2019
+    /     h4 Fly of appear god third also years for spirit.
+    /     p Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
+    /     a.btn.btn-outline-primary.px-3 href="news" role="button" target="_blank" Подробнее →
+    / .row.mb-7
+    /   .col
+    /     .pb-3 = link_to image_tag('news/news-1.jpg', alt: "First slide", class: "img-fluid"), 'news'
+    /     p.small.text-muted 9 Декабря, 2019
+    /     h4 Fly of appear god third also years for spirit.
+    /     p Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
+    /     a.btn.btn-outline-primary.px-3 href="news" role="button" target="_blank" Подробнее →
+    / .row.mb-7
+    /   .col
+    /     .pb-3 = link_to image_tag('news/news-1.jpg', alt: "First slide", class: "img-fluid"), 'news'
+    /     p.small.text-muted 9 Декабря, 2019
+    /     h4 Fly of appear god third also years for spirit.
+    /     p Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
+    /     a.btn.btn-outline-primary.px-3 href="news" role="button" target="_blank" Подробнее →
+    / .row.mb-7
+    /   .col
+    /     .pb-3 = link_to image_tag('news/news-1.jpg', alt: "First slide", class: "img-fluid"), 'news'
+    /     p.small.text-muted 9 Декабря, 2019
+    /     h4 Fly of appear god third also years for spirit.
+    /     p Earth called waters over appear be land he creeping isn't brought winged night. Multiply he set he set he fish us him isn't  he fly. Called waters over appear fly, have days give seed there very all very.
+    /     a.btn.btn-outline-primary.px-3 href="news" role="button" target="_blank" Подробнее →
 
+hr
 = render "partials/subscription"

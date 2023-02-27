@@ -1,3 +1,5 @@
+- content_for :title, 'Книги – Евгения Овчинникова, писательница'
+
 = render'partials/navbar',
         active: "books"
 
@@ -14,6 +16,22 @@
 
   .container.eo-section
     .row
+      .col-md-4.mb-6.px-4
+        a href='book_treasure'
+          .mb-5 = image_tag 'books/book-treasure.jpg', class: 'img-fluid book-img'
+          div
+            .p-1.h3 Сокровища
+            .p-1.text-dark Повесть, 2022
+            / .p-1.small.text-muted ЛитРес: Издательство, 2019 г.
+
+      .col-md-4.mb-6.px-4
+        a href='book_fire'
+          .mb-5 = image_tag 'books/book-fire.jpg', class: 'img-fluid book-img'
+          div
+            .p-1.h3 Сквозь огонь
+            .p-1.text-dark Роман
+            .p-1.small.text-muted ЛитРес: Издательство, 2019 г.
+
       .col-md-4.mb-6.px-4
         a href='book_mortal_kombat'
           .mb-5 = image_tag 'books/book-mortal-kombat.jpg', class: 'img-fluid book-img'
@@ -41,7 +59,15 @@
             .p-1.text-dark Роман
             .p-1.small.text-muted КомпасГид, 2019 г.
 
-    .row
+      .col-md-4.mb-6.px-4
+        a href='book_common_people'
+          .mb-5 = image_tag 'books/common-people.jpg', class: 'img-fluid book-img'
+          / .mb-3 = link_to image_tag('books/book-zero.jpg', class: 'img-fluid book-img'), 'https://www.labirint.ru/books/687775/', target: '_blank'
+          div
+            .p-1.h3 Обычные люди
+            .p-1.text-dark Роман
+            .p-1.small.text-muted КомпасГид, 2021 г.
+
       .col-md-4.mb-6.px-4
         a href='book_stories'
           .mb-5 = image_tag 'books/book-stories.jpg', class: 'img-fluid book-img'
@@ -77,5 +103,13 @@
             .p-1.h3 Вечеринка с&nbsp;карликами
             .p-1.text-dark Сборник рассказов
             .p-1.small.text-muted Издательские решения, 2020 г.
+
+      .col-md-4.mb-6.px-4
+        a href='book_ne_rasskazivay'
+          .mb-5 = image_tag 'books/book-dont-tell.jpg', class: 'img-fluid book-img'
+          div
+            .p-1.h3 Никому не рассказывай
+            .p-1.text-dark Серия: “Рассказы Волчка”
+            .p-1.small.text-muted Волчок, 2021 г.
 
 = render "partials/subscription"
