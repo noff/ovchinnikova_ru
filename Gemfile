@@ -27,6 +27,7 @@ gem 'uglifier'
 gem 'jbuilder'
 
 gem 'bootstrap', '~> 4.3.1'
+gem 'ed25519'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
