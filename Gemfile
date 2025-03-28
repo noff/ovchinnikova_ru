@@ -11,9 +11,9 @@ gem 'sassc-rails'
 gem 'slim-rails'
 gem 'pg'
 gem 'webpacker', '~> 4.0'
-gem 'activeadmin'
+# gem 'activeadmin'
 gem 'rails-i18n'
-gem 'activeadmin_quill_editor'
+# gem 'activeadmin_quill_editor'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
