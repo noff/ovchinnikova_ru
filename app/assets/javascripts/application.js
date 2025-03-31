@@ -13,5 +13,4 @@
 //= require rails-ujs
 //= require popper
 //= require bootstrap
-//= require subscription
 //= require_tree .
