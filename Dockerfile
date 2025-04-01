@@ -4,10 +4,11 @@ RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
   apt-get update && apt-get install -y nodejs nginx supervisor neovim python2 && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
+RUN npm install -g corepack@latest
 
 COPY . /app
 WORKDIR /app
-COPY config/master.key /app/config/
+#COPY config/master.key /app/config/
 
 ENV RAILS_ENV=production
 ENV NODE_OPTIONS=--openssl-legacy-provider
@@ -20,6 +21,8 @@ RUN bundle config set without 'development test' && bundle install
 RUN corepack enable && yarn
 
 RUN bundle exec rake assets:precompile --trace
+
+RUN rm /app/config/master.key
 
 RUN rm /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default &&\
     ln -s /app/config/nginx/default.conf /etc/nginx/conf.d/default.conf &&\
