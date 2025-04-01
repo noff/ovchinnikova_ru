@@ -1,6 +1,9 @@
 {
   "name": "ovchinnikova",
   "private": true,
+  "resolutions": {
+    "node-sass": "npm:sass"
+  },
   "dependencies": {
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
@@ -8,7 +11,8 @@
     "bootstrap-icons": "^1.0.0-alpha5",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
-    "yarn": "^1.22.22"
+    "yarn": "^1.22.22",
+    "sass": "^1.86.1"
   },
   "version": "0.1.0",
   "devDependencies": {
