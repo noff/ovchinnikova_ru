@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Build docker container
 
-Things you may want to cover:
+Build:
 
-* Ruby version
+```shell
+docker build . -t rees46/ovchinnikova:2025.04.21.01 --platform linux/amd64 
+```
 
-* System dependencies
+Push:
 
-* Configuration
+```shell 
+docker push rees46/ovchinnikova:2025.04.21.02
+```
 
-* Database creation
+Use:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```shell
+docker run -p 8080:8080 -e RAILS_LOG_TO_STDOUT='true' -e RAILS_MASTER_KEY='...' -it rees46/ovchinnikova:2025.04.21.01
+```
