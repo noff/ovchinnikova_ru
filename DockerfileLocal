@@ -1,0 +1,15 @@
+FROM ruby:2.7.5
+
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+RUN apt-get update && apt-get install -y nodejs nginx supervisor neovim python2
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN npm install -g corepack@latest
+RUN corepack enable && yarn
+ENV NODE_OPTIONS=--openssl-legacy-provider
+ENV TZ="Europe/Moscow"
+
+WORKDIR /app
+
+EXPOSE 3000
+
+ENV REDISCLI_HOST="host.docker.internal"

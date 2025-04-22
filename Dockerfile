@@ -6,7 +6,8 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN npm install -g corepack@latest
 RUN corepack enable && yarn
 
-COPY . /app
+COPY Gemfile /app/
+COPY Gemfile.lock /app/
 WORKDIR /app
 
 ENV RAILS_ENV=production
@@ -20,6 +21,8 @@ RUN bundle config set without 'development test'
 RUN bundle config set build.sassc --disable-march-tune-native
 RUN bundle config set build.bootsnap --disable-march-tune-native
 RUN bundle install
+
+COPY . /app
 
 RUN bundle exec rake assets:precompile --trace
 
