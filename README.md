@@ -5,7 +5,7 @@
 Build:
 
 ```shell
-docker build . -t rees46/ovchinnikova:latest -t rees46/ovchinnikova:2025.04.22.01 --platform linux/amd64 
+docker build . -t rees46/ovchinnikova:latest -t rees46/ovchinnikova:2025.06.16.01 --platform linux/amd64 
 ```
 
 Push:

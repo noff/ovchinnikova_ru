@@ -96,6 +96,17 @@
 
         .row.py-4
           .col-md-4.text-center.pr-0.pr-md-4
+            = link_to book_220_metrov_path do
+              = image_tag('books/book-220-metrov.jpg', class: 'img-fluid book-img mb-4')
+          .col-md-8
+            = link_to book_220_metrov_path do
+              h2 220 метров
+              p.text-dark Роман
+            p.my-4 Книга о современной семье, которая оказывается вовлечена в расследование обнаруженного при расселении коммуналки трупа. Очень питерский текст.
+            = link_to "Подробнее →", book_220_metrov_path, class: 'btn d-block d-md-inline-block btn-outline-primary btn-md'
+
+        .row.py-4
+          .col-md-4.text-center.pr-0.pr-md-4
             = link_to image_tag('books/book-treasure.jpg', class: 'img-fluid book-img mb-4'), 'book_treasure'
           .col-md-8
             a href='book_treasure'
@@ -104,7 +115,6 @@
             .my-4
               p Реалистическая повесть о девочке Асе, которая проводит лето в деревне в семье тети. В большой семье каждый занят своим делом. Ася хранит и перепрятывает сокровища и воюет со злым индюком. Тетя делает коньяк из самогона и мечтает заработать на его продаже. Дядя не может решить, ломать ли сарай или чинить. Двоюродные сестры-подростки бесконечно красятся и болтают о мальчиках. Старшая сестра приезжает из города, молча ложится на кровать, несколько недель не встает и не рассказывает, почему. А бабушка...
             a.btn.d-block.d-md-inline-block.btn-outline-primary.btn-md href="book_treasure" role="button" Подробнее →
-
 
         .row.py-4
           .col-md-4.text-center.pr-0.pr-md-4

@@ -17,6 +17,15 @@
   .container.eo-section
     .row
       .col-md-4.mb-6.px-4
+        = link_to book_220_metrov_path do
+          .mb-5
+            = image_tag 'books/book-220-metrov.jpg', class: 'img-fluid book-img'
+          div
+            .p-1.h3 220 метров
+            .p-1.text-dark Роман, 2025
+          / .p-1.small.text-muted ЛитРес: Издательство, 2019 г.
+
+      .col-md-4.mb-6.px-4
         a href='book_treasure'
           .mb-5 = image_tag 'books/book-treasure.jpg', class: 'img-fluid book-img'
           div
