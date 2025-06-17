@@ -11,14 +11,14 @@ docker build . -t rees46/ovchinnikova:latest -t rees46/ovchinnikova:2025.06.16.0
 Push:
 
 ```shell 
-docker push rees46/ovchinnikova:2025.04.22.01
+docker push rees46/ovchinnikova:2025.06.16.01
 docker push rees46/ovchinnikova:latest
 ```
 
 Use:
 
 ```shell
-docker run -d -p 8001:8080 -e RAILS_LOG_TO_STDOUT='true' -e RAILS_MASTER_KEY='...' -it rees46/ovchinnikova:2025.04.21.01
+docker run -d -p 8001:8080 -e RAILS_LOG_TO_STDOUT='true' -e RAILS_MASTER_KEY='...' -it rees46/ovchinnikova:latest
 ```
 
 ## Development
